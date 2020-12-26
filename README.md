@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning about **minecraft bedrock protocol**
 
-- 🤝 I’m looking ti help with [dragonfly](https://github.com/df-mc/dragonfly)
+- 🤝 I’m looking to help with [dragonfly](https://github.com/df-mc/dragonfly)
 
 - 📝 I regularly write articles on [https://help.witherhosting.com](https://help.witherhosting.com)
 
