@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm provsakt</h1>
+<h1 align="center">Hi 👋, I'm Raymond/provsalt</h1>
 <h3 align="center">A person who is currently addicted to golang</h3>
 
 - 💼 I’m currently working on my server, [moonlight](https://github.com/moonlightpe)
