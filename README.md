@@ -13,8 +13,6 @@
 
 - 📫 How to reach me **me@provsalt.xyz**
 
-- ⚡ Fun fact **I have spotify open 70% of the time**
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/provsalt" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="provsalt" height="30" width="40" /></a>
