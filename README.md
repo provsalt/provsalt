@@ -1,13 +1,13 @@
 <h1 align="center">Hi 👋, I'm Raymond/provsalt</h1>
 <h3 align="center">I have a Golang addiction.</h3>
 
-- 💼 I’m currently building DApps
+- 💼 I’m currently slacking at home
 
-- 🌱 I’m currently learning about **solidity programming language**
+- 🌱 I’m currently learning about **react native**
 
 - 🤝 I’m looking to help with [dragonfly](https://github.com/df-mc/dragonfly)
 
-- 🔥 2021 Goals **Contribute to more OSP**
+- 🔥 2022 Goals **Learn some DevOps and earn $$$**
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>
 
