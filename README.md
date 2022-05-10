@@ -3,11 +3,11 @@
 
 - 💼 I’m currently slacking at home
 
-- 🌱 I’m currently learning about **react native**
+- 🌱 I’m currently learning about **logistic regression**
 
 - 🤝 I’m looking to help with [dragonfly](https://github.com/df-mc/dragonfly)
 
-- 🔥 2022 Goals **Learn some DevOps and earn $$$**
+- 🔥 2022 Goals **Learn machine learning**
 
 <h3>Solidity programming</h4>
 I've learnt some solidity skills with brownie, truffle and hardhat however I'm more comfortable with hardhat at this moment.
@@ -15,6 +15,7 @@ I've learnt some solidity skills with brownie, truffle and hardhat however I'm m
 Wagmi autobond was one of my first solidity open source program however I have private projects that are closed sourced at this time.
 
 This program is aimed at making it easier for users to claim their bonds before the rebase earning the rebase rewards and getting most swagmi ERC20 token without too many transactions.
+- <a href="https://github.com/Crypto-grid/contracts">A hyper realistic P2E crypto mining simulator on the blockchain made with solidity</a>
 - <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
 
 <h3>Fullstack web development</h3>
@@ -34,8 +35,7 @@ I've never done any game engine stuff but rather touched on backend minecraft se
 
 - <a href="https://github.com/provsalt/dragonfly_mobile">Dragonfly app</a> Unfinished. Community is very against this idea too.
 - <a href="https://github.com/provsalt/PM-DF">PM-DF</a> a template dragonfly application with extended commands than the barebones dragonfly ships with.
-- <a href="https://github.com/provsalt/economy">Economy </a> poorly return economy library. I would rework this if I had time to support better concurrency.
-
+- <a href="https://github.com/provsalt/economy">Economy </a> is a library to provide a simple single currency with different providers for dragonfly.
 <h4>PocketMine</h4>
  
 - <a href="https://github.com/provsalt/DropParty">DropParty plugin</a> was really impressed when I started coding that I ported an old plugin to the latest API.
