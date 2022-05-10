@@ -15,7 +15,7 @@ I've learnt some solidity skills with brownie, truffle and hardhat however I'm m
 Wagmi autobond was one of my first solidity open source program however I have private projects that are closed sourced at this time.
 
 This program is aimed at making it easier for users to claim their bonds before the rebase earning the rebase rewards and getting most swagmi ERC20 token without too many transactions.
-- <a href="https://github.com/Crypto-grid/contracts">A hyper realistic P2E crypto mining simulator on the blockchain made with solidity</a>
+- <a href="https://github.com/Crypto-grid/contracts">📈 CryptoGrid</a> A hyper realistic P2E crypto mining simulator on the blockchain made with solidity
 - <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
 
 <h3>Fullstack web development</h3>
