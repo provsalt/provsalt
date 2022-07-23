@@ -1,10 +1,10 @@
 import { Component, lazy, onMount } from "solid-js";
-import Experiences from "../../modules/experiences";
+import Contact from "../../modules/contact";
 import { Footer } from "../../modules/footer";
-// import { Hero } from "../../modules/hero";
 import Navbar from "../../modules/navbar";
 
 const Hero = lazy(() => import("../../modules/hero/"))
+const Experiences = lazy(() => import("../../modules/experiences"))
 
 const Home: Component = () => {
 
@@ -14,6 +14,7 @@ const Home: Component = () => {
 			<div class="">
 				<Hero />
 				<Experiences />
+				<Contact />
 			</div>
 			<Footer />
 		</>

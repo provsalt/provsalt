@@ -10,7 +10,7 @@ const Hero: Component = () => {
   return (
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content flex-col-reverse lg:flex-row-reverse">
-        <img src="/code.jpg	" class="max-w-md rounded-lg shadow-2xl" />
+        <img src="/code.jpg	" class="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 class="text-5xl font-bold">
             Hi I'm Raymond!
