@@ -26,7 +26,7 @@ const Navbar: Component = () => {
                     Image: <SiGithub />,
                     Endpoint: "https://github.com/provsalt",
                 }]}  />
-                <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><BsSunFill class="text-neutral-content"/></button>
+                <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><p class="sr-only">Theme</p><BsSunFill class="text-neutral-content"/></button>
             </div>
         </nav>
     )

@@ -5,7 +5,7 @@ const Experiences: Component = () => {
   return (
     <>
     <p class="text-4xl font-black text-center my-4">Some of my past work</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 bg-neutral gap-1 gap-y-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 gap-y-4">
       <ExperienceCard
         name="Dragonfly"
         programmingLanguage="Go"
