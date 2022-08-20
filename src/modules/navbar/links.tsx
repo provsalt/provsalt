@@ -9,15 +9,15 @@ interface Props {
 }
 
 export const Links: Component = (props: Props) => {
-    return (
-        <ul class="menu menu-horizontal p-0 bg-neutral space-x-2 invisible sm:visible">
-            <For each={props.links}>
-                {(item) =>
-                <li>
-                    <a href={item.Endpoint} class="text-neutral-content">{item.Image} {item.Name}</a>
-                </li>
-                }
-            </For>
-        </ul>
-    )
-}
+	return (
+		<ul class="menu menu-horizontal p-0 bg-neutral space-x-2 invisible sm:visible">
+			<For each={props.links}>
+				{(item) =>
+					<li>
+						<a href={item.Endpoint} class="text-neutral-content">{item.Image} {item.Name}</a>
+					</li>
+				}
+			</For>
+		</ul>
+	);
+};
