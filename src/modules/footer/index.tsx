@@ -1,4 +1,4 @@
-import { SiGithub, SiTwitter, SiYoutube } from "solid-icons/si";
+// import { SiGithub, SiTwitter, SiYoutube } from "solid-icons/si";
 import { Component } from "solid-js";
 
 export const Footer: Component = () => {
@@ -8,14 +8,14 @@ export const Footer: Component = () => {
         <p>Copyright © 2022 - All right reserved</p>
       </div>
       <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a href="https://twitter.com/provsalt">
-            <SiTwitter />
+        <a href="">
+            {/* <SiTwitter /> */}
         </a>
         <a>
-            <SiYoutube />
+            {/* <SiYoutube /> */}
         </a>
         <a>
-            <SiGithub />
+            {/* <SiGithub /> */}
         </a>
       </div>
     </footer>

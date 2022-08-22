@@ -2,9 +2,11 @@ import { defineConfig } from "vite";
 import solid from "solid-start/vite";
 
 export default defineConfig({
-	plugins: [solid()],
+	plugins: [solid({})],
 	build: {
 		target: "esnext",
-		polyfillDynamicImport: false,
 	},
+	ssr: {
+		noExternal: "solid-icons"
+	}
 });

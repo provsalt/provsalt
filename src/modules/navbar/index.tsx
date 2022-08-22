@@ -1,7 +1,7 @@
 import {Component} from "solid-js";
 import {Links} from "./links";
-import { SiGithub } from "solid-icons/si";
-import { BsSunFill } from "solid-icons/bs";
+// import { SiGithub } from "solid-icons/si";
+// import { BsSunFill } from "solid-icons/bs";
 
 const Navbar: Component = () => {
 	return (
@@ -22,10 +22,10 @@ const Navbar: Component = () => {
 					},
 					{
 						Name: "",
-						Image: <SiGithub />,
+						// Image: <SiGithub />,
 						Endpoint: "https://github.com/provsalt",
 					}]}  />
-				<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><p class="sr-only">Theme</p><BsSunFill class="text-neutral-content"/></button>
+				<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><p class="sr-only">Theme</p>Theme{/*<BsSunFill class="text-neutral-content"/> */}</button>
 			</div>
 		</nav>
 	);
