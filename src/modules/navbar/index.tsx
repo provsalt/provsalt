@@ -21,11 +21,11 @@ const Navbar: Component = () => {
 						Endpoint: "#donate",
 					},
 					{
-						Name: "",
+						Name: "Github",
 						// Image: <SiGithub />,
 						Endpoint: "https://github.com/provsalt",
 					}]}  />
-				<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><p class="sr-only">Theme</p>Theme{/*<BsSunFill class="text-neutral-content"/> */}</button>
+				<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" class="btn"><p class="sr-only">Theme</p>Theme{/*<BsSunFill class="text-neutral-content"/>*/}</button>
 			</div>
 		</nav>
 	);
