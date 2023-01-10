@@ -5,8 +5,8 @@
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 	import background from "$lib/images/craig-manners.jpg";
 	import { fly } from "svelte/transition";
-	// import { backInOut } from "svelte/easing";
 	import { onMount } from "svelte";
+	import { DateTime } from "luxon";
 
 	const facts = [
 		"I am an ENTP if you care about that",
@@ -57,6 +57,14 @@
 	onMount(() => {
 		loaded = true;
 	});
+
+	let born = DateTime.now().diff(DateTime.fromISO("2006-03-24"), "years").years.toFixed(7);
+	let experience = DateTime.now().diff(DateTime.fromISO("2018-05-06"), "years").years.toFixed(3);
+	const interval = () => {
+		born = DateTime.now().diff(DateTime.fromISO("2006-03-24"), "years").years.toFixed(7);
+		experience = DateTime.now().diff(DateTime.fromISO("2018-05-06"), "years").years.toFixed(3);
+	}
+	setInterval(interval, 1000);
 </script>
 
 <svelte:head>
@@ -68,7 +76,7 @@
 		<div class="overlay text-xl gap-4">
 			<h1 class="text-5xl pt-10">Hey I'm <span class="underline">Raymond</span></h1>
 			{#if loaded}
-				<p>I’ve been on earth for 16.7 years and have been coding for approximately 4.9 years. One of my favorite
+				<p>I’ve been on earth for {born} years and have been coding for approximately {experience} years. One of my favorite
 					programming language is Go!</p>
 				<p>I am also known as the dragonfly supremacy advocate, linux guy or that guy that uses neovim </p>
 				<p>Additional fun facts:</p>

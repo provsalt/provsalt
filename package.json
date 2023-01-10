@@ -38,6 +38,7 @@
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.2.1",
 		"@fortawesome/free-solid-svg-icons": "^6.2.1",
+		"luxon": "^3.2.1",
 		"sass": "^1.57.1",
 		"svelte-fa": "^3.0.3"
 	}
