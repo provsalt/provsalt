@@ -1,17 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  daisyui: {
-    themes: [
-      "light",
-      "dark"
-    ],
-  },
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}",
-  ],
-  darkMode: "class",
+  content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "mono": ["JetBrains Mono"]
+      }
+    },
   },
-  plugins: [require("daisyui")],
-};
+  plugins: [],
+}
