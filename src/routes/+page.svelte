@@ -72,11 +72,15 @@
 </script>
 
 <svelte:head>
-	<title>Raymond's website</title>
+	<title>Raymond goo's website</title>
+	<meta name="description" content="Hmm. It looks like you found Raymond goo's website :O">
+	<meta property="og:title" content="Raymond goo's website" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Hmm. It looks like you found Raymond goo's website :O. How???" />
+	<meta property="og:image" content="https://cloud-ereq0j4b0-hack-club-bot.vercel.app/0image.png" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:image" content="https://cloud-ereq0j4b0-hack-club-bot.vercel.app/0image.png" />
 </svelte:head>
-<!--	place a div on top of background with tailwinds using relative positioning-->
-
-	<!--h-screen relative px-6 py-8 md:px-20 md:py-12 lg:px-24 lg:py-16-->
 	<section class="relative min-h-screen flex justify-center items-center py-4">
 		<div class="content">
 			<div class="overlay text-lg md:text-xl gap-2 md:gap-4">
@@ -138,7 +142,6 @@
 					href="https://unsplash.com/photos/quWWY4sumSw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 				</p>
 			</div>
-
 		</div>
 		<img alt="Sunset background" class="background" src={background} />
 </section>
