@@ -3,7 +3,7 @@
 	import Fa from "svelte-fa";
 	import { faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-	import background from "$lib/images/craig-manners.jpg";
+	import background from "$lib/images/craig-manners.webp";
 	import { fly } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { DateTime } from "luxon";
