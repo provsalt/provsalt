@@ -1,20 +1,20 @@
 .background
-  height: 100vh
-  width: 100vw
-  object-fit: cover
+  height: 100%
+  width: 100%
+  @apply absolute object-cover top-0 left-0 z-0 float-right
 
 .content
-  position: absolute
+  position: relative
+  z-index: 10
   display: flex
-  height: 100vh
-  width: 100vw
-  justify-content: center
-  align-items: center
+
+  //justify-content: center
+  //align-items: center
 
 .overlay
   display: flex
   flex-direction: column
-  height: 75vh
+  min-height: 85vh
   width: 75vw
   color: #FFFFFF
   font-size: 1.25rem

@@ -70,11 +70,12 @@
 <svelte:head>
 	<title>Raymond's website</title>
 </svelte:head>
-<!--h-screen relative px-6 py-8 md:px-20 md:py-12 lg:px-24 lg:py-16-->
-<section class="relative">
-	<div class="content">
-		<div class="overlay text-xl gap-4">
-			<h1 class="text-5xl pt-10">Hey I'm <span class="underline">Raymond</span></h1>
+<!--	place a div on top of background with tailwinds using relative positioning-->
+
+	<!--h-screen relative px-6 py-8 md:px-20 md:py-12 lg:px-24 lg:py-16-->
+	<section class="relative min-h-screen flex justify-center items-center py-4">
+		<div class="content overlay text-md md:text-xl gap-2 md:gap-4">
+			<h1 class="text-3xl md:text-5xl font-bold pt-10">Hey I'm <span class="underline">Raymond</span></h1>
 			{#if loaded}
 				<p>I’ve been on earth for {born} years and have been coding for approximately {experience} years. One of my favorite
 					programming language is Go!</p>
@@ -86,22 +87,26 @@
 					{/each}
 				</ul>
 
-				<ul class="inline-flex gap-6 text-amber-500 pb-2">
-					{#each links as link, i}
-						<li in:fly={{delay: 300 * i, duration: 500}}><a class="hover:underline" href={link.website}>{link.name}</a></li>
-					{/each}
-				</ul>
+				<div class="flex md:flex-col">
+					<ul class="flex flex-col md:flex-row gap-6 text-amber-500 pb-2">
+						{#each links as link, i}
+							<li in:fly={{delay: 300 * i, duration: 500}}><a class="hover:underline" href={link.website}>{link.name}</a></li>
+						{/each}
+					</ul>
+					<div>
+						<p>Contact me</p>
+						<ul class="flex gap-4">
+							{#each contacts as contact}
+								<li class="">
+									<a href={contact.website}>
+										<Fa icon={contact.icon} size="2x" />
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</div>
 			{/if}
-			<p>Contact me</p>
-			<ul class="inline-flex gap-4">
-				{#each contacts as contact}
-					<li class="">
-						<a href={contact.website}>
-							<Fa icon={contact.icon} size="2x" />
-						</a>
-					</li>
-				{/each}
-			</ul>
 			<div id="webring-wrapper">
 				<a class="webring-anchor" href="https://webring.hackclub.com/" id="previousBtn" title="Previous">‹</a>
 				<a class="webring-logo" href="https://webring.hackclub.com/"
@@ -115,6 +120,5 @@
 				href="https://unsplash.com/photos/quWWY4sumSw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 			</p>
 		</div>
-	</div>
-	<img alt="Sunset background" class="background" src={background} />
+		<img alt="Sunset background" class="background" src={background} />
 </section>
