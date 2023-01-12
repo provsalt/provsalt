@@ -8,21 +8,16 @@
   z-index: 10
   display: flex
 
-  //justify-content: center
-  //align-items: center
-
 .overlay
   display: flex
   flex-direction: column
-  min-height: 85vh
-  width: 75vw
   color: #FFFFFF
   font-size: 1.25rem
   line-height: 1.75rem
   background: linear-gradient(180deg, rgba(202, 202, 202, 0.5) 50%, rgba(255, 255, 255, 0) 100%)
   backdrop-filter: blur(0.2rem)
   border-radius: 0.75rem
-  @apply p-10
+  @apply p-10 min-w-[75vw] max-w-[90vw] md:max-w-[75vw]
   font-family: "JetBrains Mono", serif
 
 //.overlay::before

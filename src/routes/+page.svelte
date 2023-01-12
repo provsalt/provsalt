@@ -74,8 +74,8 @@
 
 	<!--h-screen relative px-6 py-8 md:px-20 md:py-12 lg:px-24 lg:py-16-->
 	<section class="relative min-h-screen flex justify-center items-center py-4">
-		<div class="content overlay text-md md:text-xl gap-2 md:gap-4">
-			<h1 class="text-3xl md:text-5xl font-bold pt-10">Hey I'm <span class="underline">Raymond</span></h1>
+		<div class="content overlay text-lg md:text-xl gap-2 md:gap-4">
+			<h1 class="text-4xl md:text-5xl font-bold pt-10">Hey I'm <span class="underline">Raymond</span></h1>
 			{#if loaded}
 				<p>I’ve been on earth for {born} years and have been coding for approximately {experience} years. One of my favorite
 					programming language is Go!</p>
