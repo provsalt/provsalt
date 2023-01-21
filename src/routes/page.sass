@@ -8,16 +8,19 @@
   z-index: 10
   display: flex
 
+.head
+  // use inter font
+  font-family: 'Inter', sans-serif
+
 .overlay
   display: flex
-  @apply p-10 min-w-[75vw] max-w-[90vw] md:max-w-[75vw] border-4
+  @apply p-10 min-w-[75vw] max-w-[90vw] md:max-w-[75vw]
   flex-direction: column
   color: #FFFFFF
   font-size: 1.25rem
   line-height: 1.75rem
   background: linear-gradient(180deg, rgba(202, 202, 202, 0.5) 50%, rgba(255, 255, 255, 0) 100%)
   backdrop-filter: blur(0.2rem)
-  border-radius: 0.75rem
   border-color: rgb(255, 255, 255, 0.2)
   font-family: "JetBrains Mono", serif
 

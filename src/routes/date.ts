@@ -1,4 +1,4 @@
-import { onDestroy } from 'svelte';
+import { onDestroy } from "svelte";
 
 export function onInterval(callback, milliseconds: number) {
 	setInterval(callback, milliseconds);

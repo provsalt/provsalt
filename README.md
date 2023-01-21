@@ -15,6 +15,7 @@ I've learnt some solidity skills with brownie, truffle and hardhat however I'm m
 Wagmi autobond was one of my first solidity open source program however I have private projects that are closed sourced at this time.
 
 This program automates a strategy in the dead Harmony network allowing users to earn the most from their money in the form of yield farming.
+
 - <a href="https://github.com/Crypto-grid/contracts">📈 CryptoGrid</a> A hyper realistic P2E crypto mining simulator on the blockchain made with solidity during Chainlink's spring hackathon
 - <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
 
@@ -24,6 +25,7 @@ This program automates a strategy in the dead Harmony network allowing users to 
 <img src="src/lib/images/beast.png" alt="XMRVsBeast"></img>
 
 I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
+
 - <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
 - <a href="https://github.com/provsalt/beast-backend">Backend</a>
   The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
@@ -42,9 +44,8 @@ I've never done any game engine stuff but rather touched on backend minecraft se
 - <a href="https://github.com/provsalt/LightningDeath">LightningDeath plugin</a> this was one plugin I worked on since it was on the forums requests and it seemed pretty easy and straight forward. Also supports nukkitx 1.0
 - <a href="https://github.com/provsalt/Virus">Virus virion</a> this was a joke virion/library I wrote where developers can inject this virion to their poggitci project code and add a line of code to turn it into a malicious trojan.
 
-[//]: # (<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>)
+[//]: # '<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>'
+[//]: # '<p> <img align="center" src="https://github-readme-stats.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>'
 
-[//]: # (<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>)
 <p><img align="left" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>
 <p>&nbsp;<img align="center" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>
-
