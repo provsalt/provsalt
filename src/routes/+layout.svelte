@@ -1,6 +1,7 @@
 <script>
 	import background from "$lib/images/craig-manners.webp";
 	import "./layout.sass";
+	import { page } from "$app/stores";
 </script>
 
 <div class="app">
@@ -9,7 +10,7 @@
 			<div class="content">
 				<div class="nav justify-between items-center">
 					<div></div>
-					<p>raymond@fedora: ~ - vite preview</p>
+					<p>raymond@fedora: ~{$page.url.pathname} - vite preview</p>
 					<div class="inline-flex gap-2">
 						<a href="/" class="cross rounded-full p-0.5"></a>
 						<div id="minimize" class="rounded-full p-0.5"></div>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import "./page.sass";
 	import Fa from "svelte-fa";
 	import { faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
@@ -7,7 +7,7 @@
 	import { onMount } from "svelte";
 	import { DateTime } from "luxon";
 
-	const facts = [
+	const facts: string[] = [
 		"I am an ENTP if you care about that",
 		"I am 1.75m as of 9th January 2023",
 		"I consume too much content on Youtube",
