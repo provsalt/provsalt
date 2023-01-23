@@ -44,6 +44,7 @@
 		"@types/luxon": "^3.2.0",
 		"luxon": "^3.2.1",
 		"sass": "^1.57.1",
-		"svelte-fa": "^3.0.3"
+		"svelte-fa": "^3.0.3",
+		"vite-plugin-markdown": "2.2.0-0"
 	}
 }
