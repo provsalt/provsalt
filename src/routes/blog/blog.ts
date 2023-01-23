@@ -1,5 +1,5 @@
 import fs from "fs";
-import Experience from "$lib/blogs/my-experience-with-sveltekit/blog.md"
+import Experience from "/src/lib/blogs/my-experience-with-sveltekit/blog.md"
 
 interface Blog {
 	title: string;

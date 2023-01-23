@@ -6,7 +6,7 @@ const config = {
 	test: {
 		include: ["src/**/*.{test,spec}.{js,ts}"]
 	},
-	assetsInclude: ["src/**/*.{md}"]
+	assetsInclude: ["src/**/*.{svelte,md}"]
 };
 
 export default config;
