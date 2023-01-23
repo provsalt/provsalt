@@ -1,14 +1,14 @@
 import { error } from '@sveltejs/kit';
-import fs from "fs"
+import { Blogs } from "./blog";
 
 export const load = ({params}: {params: {slug: string}}) => {
-	if (!fs.existsSync(`./src/lib/blogs/${params.slug}.md`)) {
-		throw error(404, "Not found");
+	for (const Blog in Blogs) {
+		if (params.slug === Blogs[Blog].slug) {
+			return {
+				Blog: Blogs[Blog]
+			}
+		}
 	}
-	console.log("Read")
-	const file = fs.readFileSync(`./src/lib/blogs/${params.slug}.md`, 'utf8');
-	return {
-		"content": file
-	}
+	throw error(404, "Blog does not exist");
 }
 export const csr = false
