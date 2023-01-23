@@ -4,7 +4,7 @@
 
 <div>
 	<h1 class="text-5xl mb-2">Blogs</h1>
-	{#await fetch("/blog/blogs?limit=100").then((res) => res.json())}
+	{#await fetch("/blog/blogs?limit=100").then((res) => {return res.json()})}
 		<p>Loading</p>
 		{:then blogs}
 		<div class="flex flex-col gap-4">

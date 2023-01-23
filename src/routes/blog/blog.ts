@@ -1,4 +1,5 @@
 import fs from "fs";
+import Experience from "$lib/blogs/my-experience-with-sveltekit/blog.md"
 
 interface Blog {
 	title: string;
@@ -14,6 +15,6 @@ export const Blogs: Blog[] = [
 		description: "While I was working on my portfolio, I decided to use SvelteKit. Is it worth it learning a new framework?",
 		date: "2023-01-23",
 		slug: "my-experience-with-sveltekit",
-		content: fs.readFileSync("src/lib/blogs/my-experience-with-sveltekit/blog.md", "utf8"),
+		content: Experience
 	},
 ]

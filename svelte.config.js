@@ -9,7 +9,8 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-	}
+	},
+	extensionsList: [".svelte", ".md"]
 };
 
 export default config;
