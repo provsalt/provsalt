@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { Blogs } from "./blog";
+import { Blogs } from "../blog";
 
 export const load = ({params}: {params: {slug: string}}) => {
 	for (const Blog in Blogs) {
@@ -11,4 +11,3 @@ export const load = ({params}: {params: {slug: string}}) => {
 	}
 	throw error(404, "Blog does not exist");
 }
-export const csr = false

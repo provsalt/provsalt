@@ -8,8 +8,8 @@
 	<meta name="description" content="{data.Blog.description}">
 </svelte:head>
 
-<div>
+<div class="markdown">
 	<h1>{data.Blog.title}</h1>
 	<p class="mb-4">Written on {data.Blog.date}</p>
-	<Markdown source={data.Blog.content} />
+		<Markdown source={data.Blog.content} />
 </div>
