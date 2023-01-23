@@ -10,7 +10,7 @@
 			<div class="content">
 				<div class="nav justify-between items-center">
 					<div></div>
-					<p>raymond@fedora: ~{$page.url.pathname} - vite preview</p>
+					<p>raymond@fedora: ~{$page.url.pathname === "/" ? "" : $page.url.pathname} - vite preview</p>
 					<div class="inline-flex gap-2">
 						<a href="/" class="cross rounded-full p-0.5"></a>
 						<div id="minimize" class="rounded-full p-0.5"></div>
