@@ -1,25 +1,27 @@
 <script lang="ts">
 	import "./webring.sass"
-	let myIndex: number;
+	import { onMount } from "svelte";
+	let next: string
+	let prev: string
+	onMount(() => {
+		fetch("https://webring.hackclub.com/members.json").then(r => r.json()).then(
+			(data) => {
+				for (let i = 0; i < data.length; i++) {
+					if (data[i].url === "https://www.raygoo.tech/") {
+						next = data[i+1].url
+						prev = data[i-1].url
+						break
+					}
+				}
+			}
+		)
+	})
 </script>
 
 
 <div id="webring-wrapper">
-	{#await fetch("https://webring.hackclub.com/members.json").then(r => r.json())}
-		<a class="webring-anchor" href="https://webring.hackclub.com/" title="Previous">‹</a>
+		<a class="webring-anchor" href={prev ? prev : "https://webring.hackclub.com/"} title="Previous">‹</a>
 		<a class="webring-logo" href="https://webring.hackclub.com/"
 			 title="Hack Club Webring"></a>
-		<a class="webring-anchor" href="https://webring.hackclub.com/" title="Next">›</a>
-	{:then webring}
-		{#each webring as member, index}
-			{#if member.url === "https://www.raygoo.tech/"}
-				myIndex = index;
-			{/if}
-		{/each}
-		{@debug myIndex}
-		<a class="webring-anchor" href={myIndex ? webring[myIndex-1] : "https://webring.hackclub.com/"} title="Previous">‹</a>
-		<a class="webring-logo" href="https://webring.hackclub.com/"
-			 title="Hack Club Webring"></a>
-		<a class="webring-anchor"  href={myIndex ? webring[myIndex+1] : "https://webring.hackclub.com/"} title="Next">›</a>
-		{/await}
+		<a class="webring-anchor"  href={next ? next : "https://webring.hackclub.com/"} title="Next">›</a>
 </div>
