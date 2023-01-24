@@ -24,5 +24,4 @@
 			<img alt="Sunset background" class="background" src={background} />
 		</section>
 	</main>
-	{@html '<script defer src="/_vercel/insights/script.js"></script>'}
 </div>

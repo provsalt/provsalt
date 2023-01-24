@@ -6,6 +6,7 @@
 	import { fly } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { DateTime } from "luxon";
+	import Webring from "$lib/components/webring.svelte";
 
 	const facts: string[] = [
 		"I am an ENTP if you care about that",
@@ -133,13 +134,7 @@
 							</div>
 						</div>
 					{/if}
-					<div id="webring-wrapper">
-						<a class="webring-anchor" href="https://webring.hackclub.com/" id="previousBtn" title="Previous">‹</a>
-						<a class="webring-logo" href="https://webring.hackclub.com/"
-							 title="Hack Club Webring"></a>
-						<a class="webring-anchor" href="https://webring.hackclub.com/" id="nextBtn" title="Next">›</a>
-						{@html "<script src=\"https://webring.hackclub.com/public/embed.min.js\"></script>"}
-					</div>
+					<Webring />
 					<p>Background by <a
 						href="https://unsplash.com/@craigmanners_com?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Craig
 						Manners</a> on <a
