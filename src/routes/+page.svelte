@@ -1,7 +1,7 @@
 <script lang="ts">
 	import "./page.sass";
 	import Fa from "svelte-fa";
-	import { faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
+	import { faDiscord, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 	import { fly } from "svelte/transition";
 	import { onMount } from "svelte";
@@ -55,6 +55,10 @@
 		{
 			icon: faEnvelope,
 			website: "mailto://me@raygoo.tech"
+		},
+		{
+			icon: faDiscord,
+			website: "https://discord.com/users/185623219074629632"
 		},
 		{
 			icon: faTelegram,
