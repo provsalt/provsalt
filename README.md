@@ -3,11 +3,11 @@
 
 - 💼 I’m currently rebuilding my website
 
-- 🌱 I’m currently learning about **linear algebra**
+- ☺️ I’m currently chilling
 
 - 🤝 I’m looking to help with [Hackclub](https://hackclub.com)
 
-- 🔥 2023 Goals **Learn machine learning**
+- 🔥 2023 Goals **Learn Rust, the programming language**
 
 <h3>Solidity programming</h4>
 I've learnt some solidity skills with brownie, truffle and hardhat however I'm more comfortable with hardhat at this moment.
@@ -19,18 +19,21 @@ This program automates a strategy in the dead Harmony network allowing users to 
 - <a href="https://github.com/Crypto-grid/contracts">📈 CryptoGrid</a> A hyper realistic P2E crypto mining simulator on the blockchain made with solidity during Chainlink's spring hackathon
 - <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
 
-<h3>Fullstack web development</h3>
+<h3>Web development</h3>
+- My own website
+  <img src="src/lib/images/page.png" alt="Raymond's home page"></img>
+  My website was built using sveltekit with tailwinds and typescript. Personally I'm quite proud of the simplicity and design of the webpage
 - XMRVsBeast
 
 <img src="src/lib/images/beast.png" alt="XMRVsBeast"></img>
 
-I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
+  I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
 
-- <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
-- <a href="https://github.com/provsalt/beast-backend">Backend</a>
-  The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
+  - <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
+  - <a href="https://github.com/provsalt/beast-backend">Backend</a>
+    The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
 
-I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
+  I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
 
 <h3>Game development</h3>
 I've never done any game engine stuff but rather touched on backend minecraft server softwares because that was what intrested me back then.
