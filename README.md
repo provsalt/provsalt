@@ -33,8 +33,7 @@ This program automates a strategy in the dead Harmony network allowing users to 
 
   - <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
   - <a href="https://github.com/provsalt/beast-backend">Backend</a>
-
-    The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
+  The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
 
   I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
 
