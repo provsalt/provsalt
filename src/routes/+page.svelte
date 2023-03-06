@@ -73,10 +73,10 @@
 	let born = DateTime.now().diff(DateTime.fromISO("2006-03-24"), "years").years.toFixed(7);
 	let experience = DateTime.now().diff(DateTime.fromISO("2018-05-06"), "years").years.toFixed(3);
 	const interval = () => {
-		born = DateTime.now().diff(DateTime.fromISO("2006-03-24"), "years").years.toFixed(7);
+		born = DateTime.now().diff(DateTime.fromISO("2006-03-24"), "years").years.toFixed(8)
 		experience = DateTime.now().diff(DateTime.fromISO("2018-05-06"), "years").years.toFixed(3);
 	}
-	setInterval(interval, 1000);
+	setInterval(interval, 100);
 </script>
 
 <svelte:head>
