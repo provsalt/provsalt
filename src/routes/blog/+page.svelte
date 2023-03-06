@@ -4,9 +4,11 @@
 
 <div>
 	<h1 class="text-5xl mb-2">Blogs</h1>
-	{#await fetch("/blog/blogs?limit=100").then((res) => {return res.json()})}
+	{#await fetch("/blog/blogs?limit=100").then((res) => {
+		return res.json();
+	})}
 		<p>Loading</p>
-		{:then blogs}
+	{:then blogs}
 		<div class="flex flex-col gap-4">
 			{#each blogs as blog, index}
 				{#if index >= offset && index < offset + 5}
@@ -17,13 +19,23 @@
 				{/if}
 			{/each}
 			{#if offset > 0}
-				<button on:click={() => {offset -= 5; console.log(offset)}}>Previous Page</button>
+				<button
+					on:click={() => {
+						offset -= 5;
+						console.log(offset);
+					}}>Previous Page</button
+				>
 			{/if}
 			{#if offset + 5 < blogs.length}
-				<button on:click={() => {offset += 5; console.log(offset)}}>Next Page</button>
+				<button
+					on:click={() => {
+						offset += 5;
+						console.log(offset);
+					}}>Next Page</button
+				>
 			{/if}
 		</div>
-		{:catch error}
+	{:catch error}
 		<p>Unable to find any blogs at the moment</p>
 	{/await}
 </div>

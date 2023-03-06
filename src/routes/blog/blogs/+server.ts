@@ -13,7 +13,9 @@ export function GET({ url }: RequestEvent) {
 	if (isNaN(limit) || limit < 1 || limit > 100) {
 		throw error(400, "Invalid limit");
 	}
-	return json(Blogs.sort((a, b) => {
-		return new Date(b.date).getTime() - new Date(a.date).getTime();
-	}).slice(offset, offset + limit))
+	return json(
+		Blogs.sort((a, b) => {
+			return new Date(b.date).getTime() - new Date(a.date).getTime();
+		}).slice(offset, offset + limit)
+	);
 }

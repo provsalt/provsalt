@@ -1,11 +1,12 @@
 <script lang="ts">
-	import Markdown from '@magidoc/plugin-svelte-marked';
-	import "./page.sass"
+	import Markdown from "@magidoc/plugin-svelte-marked";
+	import "./page.sass";
 	export let data;
 </script>
+
 <svelte:head>
 	<title>{data.Blog.title}</title>
-	<meta name="description" content="{data.Blog.description}">
+	<meta name="description" content={data.Blog.description} />
 </svelte:head>
 
 <div class="markdown">

@@ -29,13 +29,13 @@ This program automates a strategy in the dead Harmony network allowing users to 
 
 <img src="src/lib/images/beast.png" alt="XMRVsBeast"></img>
 
-  I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
+I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
 
-  - <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
-  - <a href="https://github.com/provsalt/beast-backend">Backend</a>
+- <a href="https://github.com/provsalt/beast-oss">Frontend</a> The code looks terrible.
+- <a href="https://github.com/provsalt/beast-backend">Backend</a>
   The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
 
-  I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
+I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
 
 <h3>Game development</h3>
 I've never done any game engine stuff but rather touched on backend minecraft server softwares because that was what intrested me back then.

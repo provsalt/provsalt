@@ -1,5 +1,5 @@
 <script>
-import { page } from "$app/stores";
+	import { page } from "$app/stores";
 </script>
 
 <h1 class="text-6xl font-black`">{$page.status}</h1>
