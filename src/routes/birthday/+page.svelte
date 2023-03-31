@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DateTime, Interval } from "luxon";
 
-	let birthday = DateTime.local(2023, 3, 24, {zone: "Asia/Singapore"});
+	let birthday = DateTime.local(2024, 3, 24, {zone: "Asia/Singapore"});
 	let timeDiff = Interval.fromDateTimes(DateTime.now(), birthday);
 	setInterval(() => {
 		timeDiff = Interval.fromDateTimes(DateTime.now(), birthday);
