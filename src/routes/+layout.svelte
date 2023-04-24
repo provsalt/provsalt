@@ -1,5 +1,5 @@
 <script>
-	import background from "$lib/images/craig-manners.webp";
+	import background from "$lib/images/pramod-tiwari.webp";
 	import "./layout.sass";
 	import { page } from "$app/stores";
 </script>
@@ -23,7 +23,7 @@
 					<slot />
 				</div>
 			</div>
-			<img alt="Sunset background" class="background" src={background} />
+			<img alt="Awesome background" class="background" src={background} />
 		</section>
 	</main>
 </div>

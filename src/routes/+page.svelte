@@ -164,15 +164,7 @@
 	{/if}
 	<Webring />
 	<p>
-		Background by <a
-			href="https://unsplash.com/@craigmanners_com?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-			>Craig Manners</a
-		>
-		on
-		<a
-			href="https://unsplash.com/photos/quWWY4sumSw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-			>Unsplash</a
-		>
+		Background by <a href="https://unsplash.com/@pramodtiwari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pramod Tiwari</a> on <a href="https://unsplash.com/photos/KSvZHhM-Jbw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 	</p>
 </div>
 <!--			</div>-->
