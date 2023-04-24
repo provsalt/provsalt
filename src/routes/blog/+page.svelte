@@ -3,7 +3,7 @@
 </script>
 
 <div>
-	<h1 class="text-5xl mb-2">Blogs</h1>
+	<h1 class="text-5xl mb-4 inter-font font-bold">Blogs</h1>
 	{#await fetch("/blog/blogs?limit=100").then((res) => {
 		return res.json();
 	})}
@@ -13,8 +13,7 @@
 			{#each blogs as blog, index}
 				{#if index >= offset && index < offset + 5}
 					<div class="flex flex-col gap-2">
-						<a href="/blog/{blog.slug}" class="text-2xl">{blog.title}</a>
-						<p>{blog.description}</p>
+						<a href="/blog/{blog.slug}"><p class="text-2xl inter-font">{blog.title}</p><p class="text-lg">About {(blog.content.split(" ").length /190).toFixed(0)} minutes</p><p>{blog.description}</p></a>
 					</div>
 				{/if}
 			{/each}
