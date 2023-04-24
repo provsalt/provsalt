@@ -114,7 +114,7 @@
 			<ul class="flex flex-col md:flex-row gap-6 text-amber-500 pb-2">
 				{#each links as link, i}
 					<li in:fly={{ delay: 300 * i, duration: 500 }}>
-						<a class="hover:underline" href={link.website}>{link.name}</a>
+						<a class="hover:border-b-2 border-amber-300 transition-all delay-100" href={link.website}>{link.name}</a>
 					</li>
 				{/each}
 			</ul>
