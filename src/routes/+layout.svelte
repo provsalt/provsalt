@@ -2,6 +2,7 @@
 	import background from "$lib/images/pramod-tiwari.webp";
 	import "./layout.sass";
 	import { page } from "$app/stores";
+	import { dev } from "$app/environment";
 </script>
 
 <div class="app">
@@ -26,4 +27,7 @@
 			<img alt="Awesome background" class="background" src={background} />
 		</section>
 	</main>
+	{#if !dev}
+		<script defer src="/_vercel/insights/script.js"></script>
+		{/if}
 </div>
