@@ -23,5 +23,5 @@
 
 いつも学校の宿題をする前に日本語を勉強したいから自分は日本語を楽し見たいと思う。
 来年は学校で日本語を学ぶかもしれない。
-![Anki stats](stats_1.png)
-![Anki learning stats](stats_2.png)
+![Anki stats](https://raw.githubusercontent.com/provsalt/provsalt/stable/src/lib/blogs/30_days_of_japanese/stats_1.png)
+![Anki learning stats](https://raw.githubusercontent.com/provsalt/provsalt/stable/src/lib/blogs/30_days_of_japanese/stats_2.png)
