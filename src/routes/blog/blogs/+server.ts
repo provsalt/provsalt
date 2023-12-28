@@ -8,10 +8,10 @@ export function GET({ url }: RequestEvent) {
 	const limit = Number(url.searchParams.get("limit") ?? "5");
 
 	if (isNaN(offset) || offset < 0) {
-		throw error(400, "Invalid offset");
+		error(400, "Invalid offset");
 	}
 	if (isNaN(limit) || limit < 1 || limit > 100) {
-		throw error(400, "Invalid limit");
+		error(400, "Invalid limit");
 	}
 	return json(
 		Blogs.sort((a, b) => {

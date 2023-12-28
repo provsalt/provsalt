@@ -9,5 +9,5 @@ export const load = ({ params }: { params: { slug: string } }) => {
 			};
 		}
 	}
-	throw error(404, "Blog does not exist");
+	error(404, "Blog does not exist");
 };

@@ -106,14 +106,14 @@
 		<p>Additional fun facts:</p>
 		<ul class="list-disc list-inside">
 			{#each facts as fact, i}
-				<li in:fly={{ delay: 300 * i, duration: 500 }}>{fact}</li>
+				<li in:fly|global={{ delay: 300 * i, duration: 500 }}>{fact}</li>
 			{/each}
 		</ul>
 
 		<div class="flex md:flex-col justify-between">
 			<ul class="flex flex-col md:flex-row gap-6 text-amber-500 pb-2">
 				{#each links as link, i}
-					<li in:fly={{ delay: 300 * i, duration: 500 }}>
+					<li in:fly|global={{ delay: 300 * i, duration: 500 }}>
 						<a class="hover:border-b-2 border-amber-300 transition-all delay-100" href={link.website}>{link.name}</a>
 					</li>
 				{/each}
