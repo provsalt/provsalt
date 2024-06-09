@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Raymond</h1>
 <h3 align="center">I have a Golang addiction.</h3>
 
-- 💼 I’m currently ending working
+- 💼 I’m currently ending work
 
 - ☺️ I’m currently smurfing in school
 
-- 🤝 I’m looking to help with [Hackclub](https://hackclub.com)
+- 🤝 Currently looking to collaborate on **anything**
 
 - 🔥 2024 Goals **Grind out the GPA**
 
