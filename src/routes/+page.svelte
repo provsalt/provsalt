@@ -35,10 +35,6 @@
 			website: "#"
 		},
 		{
-			name: "scrapbook",
-			website: "https://me.raygoo.tech/"
-		},
-		{
 			name: "spotify",
 			website: "https://open.spotify.com/user/21qzgfzjmn75bez7dxkmt4qni"
 		},
@@ -50,11 +46,11 @@
 	const contacts = [
 		{
 			icon: faLinkedin,
-			website: "https://www.linkedin.com/in/raymond-goo-439406220/"
+			website: "https://www.linkedin.com/in/raymond-goo"
 		},
 		{
 			icon: faEnvelope,
-			website: "mailto://me@raygoo.tech"
+			website: "mailto://me@raymond.moe"
 		},
 		{
 			icon: faDiscord,
