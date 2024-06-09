@@ -1,23 +1,13 @@
 <h1 align="center">Hi 👋, I'm Raymond</h1>
 <h3 align="center">I have a Golang addiction.</h3>
 
-- 💼 I’m currently rebuilding my website
+- 💼 I’m currently ending working
 
-- ☺️ I’m currently chilling
+- ☺️ I’m currently smurfing in school
 
 - 🤝 I’m looking to help with [Hackclub](https://hackclub.com)
 
-- 🔥 2023 Goals **Learn Rust, the programming language**
-
-<h3>Solidity programming</h4>
-I've learnt some solidity skills with brownie, truffle and hardhat however I'm more comfortable with hardhat at this moment.
-
-Wagmi autobond was one of my first solidity open source program however I have private projects that are closed sourced at this time.
-
-This program automates a strategy in the dead Harmony network allowing users to earn the most from their money in the form of yield farming.
-
-- <a href="https://github.com/Crypto-grid/contracts">📈 CryptoGrid</a> A hyper realistic P2E crypto mining simulator on the blockchain made with solidity during Chainlink's spring hackathon
-- <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
+- 🔥 2024 Goals **Grind out the GPA**
 
 <h3>Web development</h3>
 - My own website
@@ -36,6 +26,16 @@ I used to create a frontend react application closed sourced however I've delete
   The backend was pretty incomplete since p2pool was released and the pool closed down and there wasn't really much to do since the p2pool community is more active than me lol.
 
 I've also wrote <a href="https://github.com/provsalt/monero-checker">Monero checker</a> which does not work well with webpack because I have never written node packages. But it was mostly copied from <a href="https://xmr.llcoins.net/checktx.html"></a>. The code was really undocumented and I had to dig up how it worked.
+
+<h3>Solidity programming</h4>
+I've learnt some solidity skills with brownie, truffle and hardhat however I'm more comfortable with hardhat at this moment.
+
+Wagmi autobond was one of my first solidity open source program however I have private projects that are closed sourced at this time.
+
+This program automates a strategy in the dead Harmony network allowing users to earn the most from their money in the form of yield farming.
+
+- <a href="https://github.com/Crypto-grid/contracts">📈 CryptoGrid</a> A hyper realistic P2E crypto mining simulator on the blockchain made with solidity during Chainlink's spring hackathon
+- <a href="https://github.com/provsalt/wagmi-autobond">Wagmi autobond</a>
 
 <h3>Game development</h3>
 I've never done any game engine stuff but rather touched on backend minecraft server softwares because that was what intrested me back then.
