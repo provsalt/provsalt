@@ -11,13 +11,13 @@
 
 <h3>Web development</h3>
 - My own website
-  <img src="src/lib/images/page.png" alt="Raymond's home page"></img>
+  <img src="public/images/page.png" alt="Raymond's home page"></img>
   
   My website was built using sveltekit with tailwinds and typescript. Personally I'm quite proud of the simplicity and design of the webpage
 
 - XMRVsBeast
 
-<img src="src/lib/images/beast.png" alt="XMRVsBeast"></img>
+<img src="public/images/beast.png" alt="XMRVsBeast"></img>
 
 I used to create a frontend react application closed sourced however I've deleted it since it scaled poorly and nextjs used to be pretty terrible. This is why my 2021 commits are low. This was also my first time giving web development a try.
 
@@ -50,7 +50,7 @@ I've never done any game engine stuff but rather touched on backend minecraft se
 - <a href="https://github.com/provsalt/Virus">Virus virion</a> this was a joke virion/library I wrote where developers can inject this virion to their poggitci project code and add a line of code to turn it into a malicious trojan.
 
 [//]: # '<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>'
-[//]: # '<p> <img align="center" src="https://github-readme-stats.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>'
+[//]: # '<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>'
 
 <p><img align="left" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs?username=provsalt&show_icons=true&locale=en&theme=chartreuse-dark" alt="provsalt" /></p>
 <p>&nbsp;<img align="center" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=provsalt&show_icons=true&locale=en&count_private=true&theme=chartreuse-dark" alt="provsalt" /></p>
