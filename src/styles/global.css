@@ -1,2 +1,58 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@font-face {
+    font-family: Zen Dots;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/Zen_Dots/ZenDots-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: Zen Maru Gothic;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Zen Maru Gothic;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: Zen Maru Gothic;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Zen Maru Gothic;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: Zen Maru Gothic;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf") format("truetype");
+}
+
+@theme {
+    --font-sans: "Zen Dots", sans-serif;
+    --font-japanese: "Zen Maru Gothic", "Zen Dots", sans-serif;
+}
