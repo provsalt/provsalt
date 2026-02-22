@@ -8,6 +8,7 @@ import { Code } from "@/components/code/code";
 import { Travel } from "@/components/travel/travel";
 import { TravelMap } from "@/components/travel/map.tsx";
 import { About } from "@/components/about/about";
+import { Sidebar } from "@/components/sidebar/sidebar";
 
 export function getStaticPaths() {
 	return buildStaticPaths();
@@ -23,7 +24,11 @@ export function getStaticPaths() {
 		<title>Raymond Goo's Website</title>
 	</head>
 	<body class="flex flex-col min-h-svh">
+		<div class="fixed right-0 top-0 h-full z-100">
+			<Sidebar client:idle />
+		</div>
 		<div class="p-4 pt-8 md:pt-12 md:p-8 flex-1 flex flex-col gap-10">
+
 			<Hero />
 			<Divider />
 			<Code client:load />

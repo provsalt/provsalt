@@ -24,7 +24,7 @@ export const About = () => {
 			<div className="flex flex-col-reverse md:flex-row gap-6">
 				<div className="flex flex-col gap-8 w-full">
 					<Header title={t("about.title")} />
-					<div className="flex flex-col gap-3 text-lg">
+					<div className="flex flex-col gap-3 text-md md:text-lg">
 						{t('about.intro', { dob: formattedDob, age })
 							.split('\n')
 							.map((line, i) => <p key={i}>{line}</p>)}
