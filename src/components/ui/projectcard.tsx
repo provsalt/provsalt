@@ -20,11 +20,11 @@ export const ProjectCard = (props: ProjectCardProps) => {
 	}, [props.github]);
 
 	return (
-		<a target="_blank" rel="noopener" href={props.github} className="border border-accent/30 hover:border-accent hover:cursor-grab transition-colors duration-300 px-4 py-12 rounded-xl w-full">
+		<a target="_blank" rel="noopener" href={props.github} className="border border-accent md:border-accent/30 hover:border-accent hover:cursor-grab transition-colors duration-300 px-4 py-12 rounded-xl w-full">
 			<img
 				src={props.image}
 				alt={`Image of ${props.name} project`}
-				className="mb-3 w-full aspect-video object-cover rounded"
+				className="mb-3 w-full aspect-video object-cover rounded-2xl"
 			/>
 			<div className="flex flex-col gap-4">
 				<div className="flex items-center justify-between">

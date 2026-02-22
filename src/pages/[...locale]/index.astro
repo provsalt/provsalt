@@ -7,6 +7,7 @@ import { Divider } from "@/components/ui/divider";
 import { Code } from "@/components/code/code";
 import { Travel } from "@/components/travel/travel";
 import { TravelMap } from "@/components/travel/map.tsx";
+import { About } from "@/components/about/about";
 
 export function getStaticPaths() {
 	return buildStaticPaths();
@@ -33,6 +34,8 @@ export function getStaticPaths() {
 					<div slot="fallback">Loading</div>
 				</TravelMap>
 			</div>
+
+			<About client:idle />
 		</div>
 	</body>
 </html>
