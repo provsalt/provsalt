@@ -12,8 +12,8 @@ export const Hero = () => {
 			</div>
 
 			<div className="flex gap-2">
-				<Button>{t("hero.button.primary")}</Button>
-				<Button variant="secondary">{t("hero.button.secondary")}</Button>
+				<Button size="lg">{t("hero.button.primary")}</Button>
+				<Button size="lg" variant="secondary">{t("hero.button.secondary")}</Button>
 			</div>
 		</div>
 	)

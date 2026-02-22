@@ -1,4 +1,22 @@
 {
+  "code": {
+    "github": "See more on Github",
+    "projects": {
+      "8cbc": {
+        "description": "8CBC is a hackathon project for OCBC that adds an AI voice/chat assistant to a full-stack digital banking platform, with a human agent call scheduling system and a knowledgebase that feeds the AI with up-to-date banking information",
+        "name": "8CBC"
+      },
+      "soramail": {
+        "description": "Generate forwarded email addresses using Cloudflare email routing in your terminal!",
+        "name": "Soramail"
+      },
+      "website": {
+        "description": "This website was first created in 2022 and updated in 2026 using Astro and React with a newer internationalized website.",
+        "name": "This website"
+      }
+    },
+    "title": "I Code"
+  },
   "hero": {
     "button": {
       "primary": "Find Out More",

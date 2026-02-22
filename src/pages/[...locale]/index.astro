@@ -3,11 +3,13 @@ import "@/styles/global.css";
 import { Home } from "@/components/views/home.tsx";
 import i18n from "i18next";
 import { buildStaticPaths } from "astro-react-i18next/utils";
+import { Hero } from "@/components/hero/hero";
+import { Divider } from "@/components/ui/divider";
+import { Code } from "@/components/code/code";
 
 export function getStaticPaths() {
 	return buildStaticPaths();
 }
-
 ---
 
 <html lang={i18n.language}>
@@ -19,6 +21,10 @@ export function getStaticPaths() {
 		<title>Raymond Goo's Website</title>
 	</head>
 	<body class="flex flex-col min-h-svh">
-		<Home />
+		<div class="p-4 pt-8 md:pt-12 md:p-8 flex-1 flex flex-col gap-10">
+			<Hero />
+			<Divider />
+			<Code client:load />
+		</div>
 	</body>
 </html>
