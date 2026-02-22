@@ -29,7 +29,9 @@ export function getStaticPaths() {
 			<Travel />
 
 			<div class="px-4">
-				<TravelMap client:only="react" />
+				<TravelMap client:only="react">
+					<div slot="fallback">Loading</div>
+				</TravelMap>
 			</div>
 		</div>
 	</body>

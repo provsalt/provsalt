@@ -7,6 +7,7 @@
       "dependencies": {
         "@astrojs/partytown": "^2.1.4",
         "@astrojs/react": "^4.4.2",
+        "@icons-pack/react-simple-icons": "^13.11.2",
         "@tailwindcss/vite": "^4.2.0",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
@@ -194,6 +195,8 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@hono/node-server": ["@hono/node-server@1.19.9", "", { "peerDependencies": { "hono": "^4" } }, "sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw=="],
+
+    "@icons-pack/react-simple-icons": ["@icons-pack/react-simple-icons@13.11.2", "", { "peerDependencies": { "react": "^16.13 || ^17 || ^18 || ^19" } }, "sha512-IiYWH7Dlp4HvTxsL9Mh/1tjKKhLikKzL+578H1ngQkoREhfXaS9yNl1SXkjNGEAYqNH2w5/tBQc0uXLWAkcSFA=="],
 
     "@img/colour": ["@img/colour@1.0.0", "", {}, "sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw=="],
 

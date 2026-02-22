@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button.tsx";
 import { useTranslation } from "react-i18next";
+import { Social } from "@/components/about/social.tsx";
 
 export const Hero = () => {
 	const { t } = useTranslation();
@@ -9,6 +10,10 @@ export const Hero = () => {
 			<div className="flex flex-col gap-4 mb-10">
 				<p className="text-4xl">{t("hero.title")}</p>
 				<p className="text-xl text-gray-200">{t("hero.description")}</p>
+			</div>
+
+			<div className="mb-4">
+				<Social />
 			</div>
 
 			<div className="flex gap-2">
