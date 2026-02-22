@@ -3,7 +3,7 @@
 @import "shadcn/tailwind.css";
 
 @font-face {
-    font-family: Zen Dots;
+    font-family: 'Zen Dots';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: Zen Maru Gothic;
+    font-family: "Zen Maru Gothic";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: Zen Maru Gothic;
+    font-family: "Zen Maru Gothic";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-    font-family: Zen Maru Gothic;
+    font-family: "Zen Maru Gothic";
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: Zen Maru Gothic;
+    font-family: "Zen Maru Gothic";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -43,21 +43,17 @@
 }
 
 @font-face {
-    font-family: Zen Maru Gothic;
+    font-family: "Zen Maru Gothic";
     font-style: normal;
     font-weight: 900;
     font-display: swap;
     src: url("/fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf") format("truetype");
 }
 
-@theme {
-    --font-sans: "Zen Dots", sans-serif;
-    --font-japanese: "Zen Maru Gothic", "Zen Dots", sans-serif;
-}
-
 @layer base {
-    &:has(html[lang="jp"]) {
+    html[lang="ja"] {
         --font-sans: var(--font-japanese);
+        --default-font-family: var(--font-japanese);
     }
     body {
         @apply bg-background text-foreground;
@@ -68,6 +64,8 @@
 }
 
 @theme inline {
+    --font-sans: "Zen Dots", sans-serif;
+    --font-japanese: "Zen Maru Gothic", "Zen Dots", sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);

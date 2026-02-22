@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "locale:extract": "i18next-cli extract"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
@@ -15,12 +16,16 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.17.1",
+    "astro-react-i18next": "^0.3.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "i18next": "^25.8.13",
+    "i18next-cli": "^1.42.12",
     "lucide-react": "^0.575.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-i18next": "^16.5.4",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.0"
   },

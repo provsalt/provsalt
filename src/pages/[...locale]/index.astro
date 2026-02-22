@@ -1,9 +1,16 @@
 ---
-import "../styles/global.css"
-import {Home} from "../components/views/home.tsx"
+import "@/styles/global.css";
+import { Home } from "@/components/views/home.tsx";
+import i18n from "i18next";
+import { buildStaticPaths } from "astro-react-i18next/utils";
+
+export function getStaticPaths() {
+	return buildStaticPaths();
+}
+
 ---
 
-<html lang="en">
+<html lang={i18n.language}>
 	<head>
 		<meta charset="utf-8" />
 		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->

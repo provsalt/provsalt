@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "button": {
+      "primary": "Find Out More",
+      "secondary": "Contact Me"
+    },
+    "description": "A developer, traveller and a photographer",
+    "title": "Hi, I'm Raymond"
+  }
+}
