@@ -17,8 +17,16 @@ export const Hero = () => {
 			</div>
 
 			<div className="flex gap-2">
-				<Button size="lg">{t("hero.button.primary")}</Button>
-				<Button size="lg" variant="secondary">{t("hero.button.secondary")}</Button>
+				<Button asChild size="lg">
+					<a href="#code">
+						{t("hero.button.primary")}
+					</a>
+				</Button>
+				<Button asChild size="lg" variant="secondary">
+					<a href="#about">
+						{t("hero.button.secondary")}
+					</a>
+				</Button>
 			</div>
 		</main>
 	)

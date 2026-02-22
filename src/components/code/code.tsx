@@ -25,7 +25,7 @@ export const Code = () => {
 		}
 	]
 	return (
-		<section className="flex flex-col gap-8">
+		<section id="code" className="flex flex-col gap-8">
 			<Header title={t("code.title")} />
 			<div className="flex flex-col md:flex-row gap-4 items-stretch">
 				{projects.map(p => {

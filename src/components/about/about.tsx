@@ -20,7 +20,7 @@ export const About = () => {
 		return () => clearInterval(interval);
 	}, []);
 	return (
-		<section className="flex flex-col gap-8">
+		<section id="about" className="flex flex-col gap-8">
 			<div className="flex flex-col-reverse md:flex-row gap-6">
 				<div className="flex flex-col gap-8 w-full">
 					<Header title={t("about.title")} />

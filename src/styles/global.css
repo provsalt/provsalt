@@ -55,6 +55,9 @@
         --font-sans: var(--font-japanese);
         --default-font-family: var(--font-japanese);
     }
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         @apply bg-background text-foreground;
     }
