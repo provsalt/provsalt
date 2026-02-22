@@ -24,5 +24,68 @@
     },
     "description": "A developer, traveller and a photographer",
     "title": "Hi, I'm Raymond"
+  },
+  "map": {
+    "akashi": "Akashi",
+    "batam": "Batam",
+    "beppu": "Beppu",
+    "fukuoka": "Fukuoka",
+    "himeji": "Himeji",
+    "hiroshima": "Hiroshima",
+    "hongKong": "Hong Kong",
+    "iwakuni": "Iwakuni",
+    "johorBahru": "Johor Bahru",
+    "kagoshima": "Kagoshima",
+    "kitakyushu": "Kitakyushu",
+    "kobe": "Kobe",
+    "kochi": "Kochi",
+    "kualaLumpur": "Kuala Lumpur",
+    "kumamoto": "Kumamoto",
+    "kurume": "Kurume",
+    "kyoto": "Kyoto",
+    "matsuyama": "Matsuyama",
+    "miyajima": "Miyajima",
+    "miyazaki": "Miyazaki",
+    "miyoshi": "Miyoshi",
+    "nagasaki": "Nagasaki",
+    "nagoya": "Nagoya",
+    "naoshima": "Naoshima",
+    "nara": "Nara",
+    "oita": "Oita",
+    "orcasIsland": "Orcas Island",
+    "osaka": "Osaka",
+    "penang": "Penang",
+    "redmond": "Redmond",
+    "saga": "Saga",
+    "seattle": "Seattle",
+    "shenzhen": "Shenzhen",
+    "shizuoka": "Shizuoka",
+    "singapore": "Singapore",
+    "takamatsu": "Takamatsu",
+    "tokyo": "Tokyo",
+    "tosu": "Tosu",
+    "uji": "Uji",
+    "yokohama": "Yokohama"
+  },
+  "travel": {
+    "title": "I travel"
+  },
+  "travels": {
+    "2024": {
+      "seattle": {
+        "description": "Had the opportunity to join ToorCamp with CodeDay in Washington state in the United States",
+        "name": "United States, June 2024"
+      }
+    },
+    "2025": {
+      "japan1": {
+        "description": "Went from Tokyo to Osaka during Spring and visited the many cities along the way.",
+        "name": "Japan, Mar 2025"
+      },
+      "japan2": {
+        "description": "First time solo-travelling, toured all prefectures in Shikoku and Kyushu (except Okinawa) by myself",
+        "name": "Japan, Sep 2025"
+      }
+    }
   }
 }

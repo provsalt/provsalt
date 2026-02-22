@@ -25,7 +25,7 @@ export const Code = () => {
 		}
 	]
 	return (
-		<div className="flex flex-col gap-8">
+		<section className="flex flex-col gap-8">
 			<Header title={t("code.title")} />
 			<div className="flex flex-col md:flex-row gap-4 items-stretch">
 				{projects.map(p => {
@@ -37,6 +37,6 @@ export const Code = () => {
 			<div className="flex justify-center">
 				<a className="border-b-2 border-accent" href="https://github.com/provsalt">{t("code.github")}</a>
 			</div>
-		</div>
+		</section>
 	)
 }

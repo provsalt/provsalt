@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export const Hero = () => {
 	const { t } = useTranslation();
 	return (
-		<div className="flex flex-col gap-6">
+		<main className="flex flex-col gap-6">
 
 			<div className="flex flex-col gap-4 mb-10">
 				<p className="text-4xl">{t("hero.title")}</p>
@@ -15,6 +15,6 @@ export const Hero = () => {
 				<Button size="lg">{t("hero.button.primary")}</Button>
 				<Button size="lg" variant="secondary">{t("hero.button.secondary")}</Button>
 			</div>
-		</div>
+		</main>
 	)
 }

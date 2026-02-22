@@ -24,5 +24,68 @@
     },
     "description": "エンジニア、旅人、そして写真家",
     "title": "こんにちは、レイモンドです"
+  },
+  "map": {
+    "akashi": "明石市",
+    "batam": "バタム",
+    "beppu": "別府市",
+    "fukuoka": "福岡市",
+    "himeji": "姫路市",
+    "hiroshima": "広島市",
+    "hongKong": "香港",
+    "iwakuni": "岩国市",
+    "johorBahru": "ジョホールバル",
+    "kagoshima": "鹿児島市",
+    "kitakyushu": "北九州市",
+    "kobe": "神戸市",
+    "kochi": "高知市",
+    "kualaLumpur": "クアラルンプール",
+    "kumamoto": "熊本市",
+    "kurume": "久留米市",
+    "kyoto": "京都市",
+    "matsuyama": "松山市",
+    "miyajima": "宮島",
+    "miyazaki": "宮崎市",
+    "miyoshi": "三好市",
+    "nagasaki": "長崎市",
+    "nagoya": "名古屋市",
+    "naoshima": "直島",
+    "nara": "奈良市",
+    "oita": "大分市",
+    "orcasIsland": "オルカス島",
+    "osaka": "大阪市",
+    "penang": "ペナン",
+    "redmond": "レドモンド",
+    "saga": "佐賀市",
+    "seattle": "シアトル",
+    "shenzhen": "深圳",
+    "shizuoka": "静岡市",
+    "singapore": "シンガポール",
+    "takamatsu": "高松市",
+    "tokyo": "東京",
+    "tosu": "鳥栖市",
+    "uji": "宇治市",
+    "yokohama": "横浜市"
+  },
+  "travel": {
+    "title": "旅の記録"
+  },
+  "travels": {
+    "2024": {
+      "seattle": {
+        "description": "アメリカのワシントン州で、CodeDayと共にToorCampに参加する機会がありました",
+        "name": "アメリカ、2024年6月"
+      }
+    },
+    "2025": {
+      "japan1": {
+        "description": "春に東京から大阪まで、途中の多くの都市を訪れながら旅しました",
+        "name": "日本、2025年3月"
+      },
+      "japan2": {
+        "description": "初めての一人旅で、四国と九州の全都道府県（沖縄を除く）を一人で巡りました",
+        "name": "日本、2025年9月"
+      }
+    }
   }
 }

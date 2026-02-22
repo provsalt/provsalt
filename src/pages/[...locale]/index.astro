@@ -1,11 +1,12 @@
 ---
 import "@/styles/global.css";
-import { Home } from "@/components/views/home.tsx";
 import i18n from "i18next";
 import { buildStaticPaths } from "astro-react-i18next/utils";
 import { Hero } from "@/components/hero/hero";
 import { Divider } from "@/components/ui/divider";
 import { Code } from "@/components/code/code";
+import { Travel } from "@/components/travel/travel";
+import { TravelMap } from "@/components/travel/map.tsx";
 
 export function getStaticPaths() {
 	return buildStaticPaths();
@@ -25,6 +26,11 @@ export function getStaticPaths() {
 			<Hero />
 			<Divider />
 			<Code client:load />
+			<Travel />
+
+			<div class="px-4">
+				<TravelMap client:only="react" />
+			</div>
 		</div>
 	</body>
 </html>
