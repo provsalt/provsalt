@@ -31,7 +31,7 @@ export const Social = () => {
 		<div className="flex flex-wrap gap-4">
 			{contacts.map(contact => {
 				return (
-					<a href={contact.website}>
+					<a key={contact.website} href={contact.website}>
 						<contact.icon size={32} />
 					</a>
 				)

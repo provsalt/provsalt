@@ -71,8 +71,12 @@
     "uji": "Uji",
     "yokohama": "Yokohama"
   },
+  "photo": {
+    "title": "I Photograph",
+    "unsplash": "See more on Unsplash"
+  },
   "travel": {
-    "title": "I travel"
+    "title": "I Travel"
   },
   "travels": {
     "2024": {

@@ -71,6 +71,10 @@
     "uji": "宇治市",
     "yokohama": "横浜市"
   },
+  "photo": {
+    "title": "フォト",
+    "unsplash": "Unsplashでもっと見る"
+  },
   "travel": {
     "title": "旅の記録"
   },

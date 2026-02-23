@@ -1,25 +1,28 @@
 import { Header } from "@/components/ui/header.tsx";
 import { useTranslation } from "react-i18next";
 import { ProjectCard } from "@/components/ui/projectcard.tsx";
+import soramailImage from "@/images/projects/soramail.gif"
+import eightcbcImage from "@/images/projects/8cbc.png"
+import websiteImage from "@/images/projects/website.png"
 
 export const Code = () => {
 	const {t} = useTranslation()
 	const projects = [
 		{
 			"name": t("code.projects.soramail.name"),
-			"image": "/images/projects/soramail.gif",
+			"image": soramailImage.src,
 			"description": t("code.projects.soramail.description"),
 			"github": "https://github.com/provsalt/soramail"
 		},
 		{
 			"name": t("code.projects.8cbc.name"),
-			"image": "/images/projects/8cbc.png",
+			"image": eightcbcImage.src,
 			"description": t("code.projects.8cbc.description"),
 			"github": "https://github.com/provsalt/8CBC"
 		},
 		{
 			"name": t("code.projects.website.name"),
-			"image": "/images/projects/website.png",
+			"image": websiteImage.src,
 			"description": t("code.projects.website.description"),
 			"github": "https://github.com/provsalt/provsalt"
 		}

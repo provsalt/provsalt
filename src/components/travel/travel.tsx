@@ -1,6 +1,9 @@
 import { Header } from "@/components/ui/header.tsx";
 import { useTranslation } from "react-i18next";
 import { TravelCard } from "@/components/ui/travelcard.tsx";
+import inasayamaImage from "@/images/travels/inasayama.jpg";
+import fushimiinariImage from "@/images/travels/fushimiinari.jpg"
+import toorcampImage from "@/images/travels/toorcamp.jpg"
 
 export const Travel = () => {
 	const {t} = useTranslation();
@@ -9,19 +12,19 @@ export const Travel = () => {
 		{
 			name: t("travels.2025.japan2.name"),
 			description: t("travels.2025.japan2.description"),
-			image: "/images/travels/inasayama.jpg",
+			image: inasayamaImage.src,
 			link: "#"
 		},
 		{
 			name: t("travels.2025.japan1.name"),
 			description: t("travels.2025.japan1.description"),
-			image: "/images/travels/fushimiinari.jpg",
+			image: fushimiinariImage.src,
 			link: "#"
 		},
 		{
 			name: t("travels.2024.seattle.name"),
 			description: t("travels.2024.seattle.description"),
-			image: "/images/travels/toorcamp.jpg",
+			image: toorcampImage.src,
 			link: "#"
 		}
 	]

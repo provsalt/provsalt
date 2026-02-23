@@ -9,7 +9,7 @@
 
 <h3>Web development</h3>
 - My own website
-  <img src="public/images/projects/website.png" alt="Raymond's home page"></img>
+  <img src="src/images/projects/website.png" alt="Raymond's home page"></img>
 
   Built using Astro + React for best performance. Slight regrets of deviating of my Next.js stack but that's ok.
 

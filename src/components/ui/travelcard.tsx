@@ -12,6 +12,8 @@ export const TravelCard = (props: TravelCardProps) => {
 		<a href={props.link} className="border border-accent md:border-accent/30 hover:border-accent transition-colors duration-300 px-4 py-12 rounded-xl w-full">
 			<img
 				src={props.image}
+				loading="lazy"
+				decoding="async"
 				alt={`Picture of me travelling in ${props.name}`}
 				className="mb-3 w-full aspect-square object-cover rounded-2xl"
 			/>

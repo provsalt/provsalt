@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { DateTime } from 'luxon';
 import { useEffect, useState } from "react";
 import { Social } from "@/components/about/social.tsx";
+import aboutImage from "@/images/me/about.png"
 
 export const About = () => {
 	const {t, i18n} = useTranslation();
@@ -33,7 +34,7 @@ export const About = () => {
 				</div>
 				<img
 					className="w-full md:w-1/2 lg:w-2/5 aspect-square object-cover rounded-lg"
-					src="/images/me/about.png"
+					src={aboutImage.src}
 					alt="Picture of myself at a concert"
 				/>
 			</div>

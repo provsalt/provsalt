@@ -21,7 +21,7 @@ export const Sidebar = () => {
 				<SelectContent className="z-110">
 					<SelectGroup>
 						{
-							Object.entries(langKey).map(([key, value]) => (<SelectItem value={key}> {value}</SelectItem>))
+							Object.entries(langKey).map(([key, value], i) => (<SelectItem key={i} value={key}> {value}</SelectItem>))
 						}
 					</SelectGroup>
 				</SelectContent>
