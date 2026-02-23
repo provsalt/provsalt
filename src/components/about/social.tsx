@@ -1,5 +1,5 @@
 import { Linkedin, Mail } from "lucide-react";
-import { SiDiscord, SiInstagram, SiMatrix, SiTelegram } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiMatrix, SiTelegram } from "@icons-pack/react-simple-icons";
 
 const contacts = [
 	{

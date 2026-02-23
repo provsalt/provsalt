@@ -1,4 +1,4 @@
-export const prerender = true;
+export const prerender = false;
 
 const UNSPLASH_API = "https://api.unsplash.com/";
 export const GET = async () => {
