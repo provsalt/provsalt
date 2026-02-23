@@ -1,20 +1,9 @@
 import { Header } from "@/components/ui/header.tsx";
 import { useTranslation } from "react-i18next";
 import Masonry from "react-masonry-css";
-import { useEffect, useState } from "react";
 import type { UnsplashPhotoList } from "@/@types/unsplash.ts";
 
-export const Photograph = () => {
-	const [photos, setPhotos] = useState<UnsplashPhotoList|undefined>();
-	useEffect(() => {
-		fetch(import.meta.env.BASE_URL + "api/unsplash").then(r => r.json()).then(r => setPhotos(r))
-	}, []);
-
-	useEffect(() => {
-		console.log(photos)
-	}, [photos]);
-
-
+export const Photograph = ({photos} : {photos: UnsplashPhotoList}) => {
 	const breakpointColumnsObj = {
 		default: 4,
 		1100: 3,

@@ -14,6 +14,13 @@ import { Photograph } from "@/components/photo/Photo";
 export function getStaticPaths() {
 	return buildStaticPaths();
 }
+
+const res = await fetch("https://api.unsplash.com/users/provsalt/photos", {
+	headers: {
+		Authorization: `Client-ID ${import.meta.env.UNSPLASH_ACCESS_KEY}`,
+	},
+});
+const photos = await res.json();
 ---
 
 <html lang={i18n.language}>
@@ -43,7 +50,7 @@ export function getStaticPaths() {
 				</TravelMap>
 			</div>
 
-			<Photograph client:visible />
+			<Photograph photos={photos} client:visible />
 			<About client:idle />
 		</div>
 	</body>

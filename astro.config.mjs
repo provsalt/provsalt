@@ -26,11 +26,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  i18n: {
-    locales: ["en", "ja"],
-    defaultLocale: "en",
-  },
-
   adapter: vercel(
     {
       webAnalytics: {
@@ -42,5 +37,9 @@ export default defineConfig({
         expiration: 60 * 60 * 24,
       }
     }
-  )
+  ),
+  i18n: {
+    locales: ["en", "ja"],
+    defaultLocale: "en",
+  },
 });
