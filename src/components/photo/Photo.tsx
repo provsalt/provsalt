@@ -20,7 +20,7 @@ export const Photograph = ({photos} : {photos: UnsplashPhotoList}) => {
 					!photos ? "Couldn't load images" : photos.map((photo, i) => {
 						if (i > 15) return;
 						return (
-							<img loading="lazy" decoding="async" src={photo.urls.small} alt={photo.alt_description ?? "Photo"} className="object-fill w-full rounded-sm" />
+							<img key={photo.id} loading="lazy" decoding="async" src={photo.urls.small} alt={photo.alt_description ?? "Photo"} className="object-fill w-full rounded-sm" />
 						)
 					})
 				}
