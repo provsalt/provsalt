@@ -34,7 +34,7 @@ export const TravelMap = ()  => {
 		  { lat: 33.5597, lng: 133.5311, label: t("map.kochi"), colour: "secondary" },
 		  { lat: 33.9081, lng: 133.8006, label: t("map.miyoshi"), colour: "secondary" },
 		  { lat: 34.3401, lng: 134.0434, label: t("map.takamatsu"), colour: "secondary" },
-		  { lat: 34.4618, lng: 134.1886, label: t("map.naoshima"), colour: "secondary" },
+		  { lat: 34.4600, lng: 133.9969, label: t("map.naoshima"), colour: "secondary" },
 		  { lat: 34.6901, lng: 135.1956, label: t("map.kobe"), colour: "secondary" },
 		  { lat: 34.6452, lng: 134.9980, label: t("map.akashi"), colour: "secondary" },
 		  { lat: 34.8153, lng: 134.6854, label: t("map.himeji"), colour: "secondary" },
@@ -46,6 +46,15 @@ export const TravelMap = ()  => {
 		  { lat: 35.1815, lng: 136.9066, label: t("map.nagoya"), colour: "secondary" },
 		  { lat: 35.4437, lng: 139.6380, label: t("map.yokohama"), colour: "secondary" },
 		  { lat: 34.9756, lng: 138.3827, label: t("map.shizuoka"), colour: "secondary" },
+			{ lat: 41.7688, lng: 140.7290, label: t("map.hakodate"), colour: "secondary" },
+			{ lat: 43.0618, lng: 141.3545, label: t("map.sapporo"), colour: "secondary" },
+			{ lat: 43.1907, lng: 140.9947, label: t("map.otaru"), colour: "secondary" },
+			{ lat: 43.7707, lng: 142.3651, label: t("map.asahikawa"), colour: "secondary" },
+			{ lat: 42.9178, lng: 143.1972, label: t("map.obihiro"), colour: "secondary" },
+			{ lat: 45.4161, lng: 141.6739, label: t("map.wakkanai"), colour: "secondary" },
+			{ lat: 43.8028, lng: 143.8926, label: t("map.kitami"), colour: "secondary" },
+			{ lat: 44.0206, lng: 144.2730, label: t("map.abashiri"), colour: "secondary" },
+			{ lat: 42.9850, lng: 144.3816, label: t("map.kushiro"), colour: "secondary" },
 	]
 
 	return (
