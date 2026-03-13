@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import reactI18next from 'astro-react-i18next';
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
+import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: "https://raymond.moe",
@@ -20,7 +21,7 @@ export default defineConfig({
         ja: "ja"
       }
     }
-  })],
+  }), mdx()],
 
   vite: {
     plugins: [tailwindcss()]

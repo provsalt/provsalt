@@ -1,0 +1,32 @@
+---
+import "@/styles/global.css";
+
+import {Sidebar} from "@/components/sidebar/sidebar.tsx";
+import {buildStaticPaths} from "astro-react-i18next/utils";
+import i18n from "i18next";
+import {Blogs} from "@/components/blogs/blogs.tsx";
+
+export function getStaticPaths() {
+  return buildStaticPaths();
+}
+---
+
+<html lang={i18n.language}>
+<head>
+    <meta charset="utf-8" />
+    <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
+    <!--<link rel="icon" href="/favicon.ico" />-->
+    <meta name="description" content="All my thoughts in one place, my writings about what I think what I feel." />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Raymond Goo | Blogs</title>
+</head>
+  <body class="flex flex-col min-h-svh">
+    <div class="fixed right-0 top-0 h-full z-100">
+        <Sidebar client:idle />
+    </div>
+    <div class="p-4 pt-8 md:pt-12 md:p-8 flex-1 flex flex-col gap-12">
+        <Blogs />
+    </div>
+  </body>
+</html>

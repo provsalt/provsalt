@@ -3,6 +3,10 @@
     "intro": "Hi I'm Raymond. I'm Born in {{dob}} which makes me {{age}} years old. I'm a student studying in Information Technology in Singapore.\nThe first time I touched coding was around 11 when I got bored and decided to mess around with the inspect element on my Dad's Laptop and built a small website using the Devtools.\nThat then drove me down the rabbithole and I revisited coding during secondary school where I coded on my phone as I did not have access to a computer.\nI love working with computers and expanding my homelab, things like running my own VMs and self-hosting services. I recently got into photography to get fresher perspective through creative work which has been helping me design better.\nFeel free to reach out to me below if you would like to work together!",
     "title": "About me"
   },
+  "blogs": {
+    "description": "Welcome to my blog, I use this place to post about my thoughts in life and what I'm working on.",
+    "title": "Blogs"
+  },
   "code": {
     "github": "See more on Github",
     "projects": {
