@@ -55,6 +55,8 @@ export const TravelMap = ()  => {
 			{ lat: 43.8028, lng: 143.8926, label: t("map.kitami"), colour: "secondary" },
 			{ lat: 44.0206, lng: 144.2730, label: t("map.abashiri"), colour: "secondary" },
 			{ lat: 42.9850, lng: 144.3816, label: t("map.kushiro"), colour: "secondary" },
+			{ lat: 60.1699, lng: 24.9384, label: t("map.helsinki"), colour: "secondary" },
+			{ lat: 60.2055, lng: 24.6559, label: t("map.espoo"), colour: "secondary" },
 	]
 
 	return (
