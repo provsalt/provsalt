@@ -1,0 +1,106 @@
+---
+import i18next from "i18next";
+import {
+	formatBlogDate,
+	getBlogPostPath,
+	type BlogEntry,
+	type BlogLocale,
+} from "@/lib/blog";
+
+interface Props {
+	locale: BlogLocale;
+	posts: readonly BlogEntry[];
+	showYearSeparators?: boolean;
+}
+
+const { locale, posts, showYearSeparators = false } = Astro.props;
+const t = i18next.getFixedT(locale);
+const entries = posts.map((post, index) => {
+	const year = post.data.pubDate.getUTCFullYear();
+	const previousYear = posts[index - 1]?.data.pubDate.getUTCFullYear();
+	return { post, year, startsYear: showYearSeparators && year !== previousYear };
+});
+---
+
+{
+	entries.length === 0 ? (
+		<p class="py-8 text-foreground/65">{t("blog.emptyState")}</p>
+	) : (
+		<ol class="signal-list relative list-none space-y-2 p-0">
+			{entries.map(({ post, year, startsYear }) => (
+				<li class="signal-entry relative pl-8 md:pl-10">
+					{startsYear && (
+						<p class="pt-6 pb-1 text-xs font-bold tracking-[0.22em] text-primary uppercase first:pt-0">
+							{year}
+						</p>
+					)}
+					<article class="border-b border-primary/20">
+						<a
+							class="group block rounded-sm px-4 py-6 transition-colors hover:bg-primary/7 focus-visible:bg-primary/7 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:px-5"
+							href={getBlogPostPath(post)}
+						>
+							<div class="font-japanese mb-3 flex items-center justify-between gap-4 text-xs text-foreground/55">
+								<time datetime={post.data.pubDate.toISOString()}>
+									{formatBlogDate(post.data.pubDate, locale)}
+								</time>
+								<span
+									class="text-base text-primary transition-transform group-hover:translate-x-[0.12rem] group-hover:-translate-y-[0.12rem]"
+									aria-hidden="true">↗</span
+								>
+							</div>
+							<h3 class="max-w-4xl text-xl leading-snug font-bold text-foreground text-balance md:text-2xl">
+								{post.data.title}
+							</h3>
+							<p class="font-japanese mt-3 max-w-3xl text-sm leading-6 text-foreground/65 md:text-base md:leading-7">
+								{post.data.description}
+							</p>
+							{post.data.tags.length > 0 && (
+								<ul
+									class="mt-4 flex list-none flex-wrap gap-2 p-0"
+									aria-label={t("blog.tags")}
+								>
+									{post.data.tags.map((tag) => (
+										<li class="font-japanese rounded-full border border-secondary/60 bg-secondary/15 px-2.5 py-1 text-[0.68rem] text-foreground/65">
+											{tag}
+										</li>
+									))}
+								</ul>
+							)}
+						</a>
+					</article>
+				</li>
+			))}
+		</ol>
+	)
+}
+
+<style>
+	.signal-list::before {
+		content: "";
+		position: absolute;
+		top: 0.9rem;
+		bottom: 0.9rem;
+		left: 0.42rem;
+		width: 2px;
+		background: linear-gradient(
+			to bottom,
+			var(--primary),
+			color-mix(in oklab, var(--secondary) 78%, var(--primary))
+		);
+		opacity: 0.75;
+	}
+
+	.signal-entry::before {
+		content: "";
+		position: absolute;
+		top: 1.58rem;
+		left: 0;
+		z-index: 1;
+		width: 0.9rem;
+		height: 0.9rem;
+		border: 2px solid var(--primary);
+		border-radius: 9999px;
+		background: var(--background);
+		box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 14%, transparent);
+	}
+</style>

@@ -1,0 +1,29 @@
+---
+import i18next from "i18next";
+import PostList from "@/components/blog/post-list.astro";
+import { Header } from "@/components/ui/header.tsx";
+import { getBlogIndexPath, type BlogEntry, type BlogLocale } from "@/lib/blog";
+
+interface Props {
+	locale: BlogLocale;
+	posts: readonly BlogEntry[];
+}
+
+const { locale, posts } = Astro.props;
+const t = i18next.getFixedT(locale);
+---
+
+<section id="writing" class="flex flex-col gap-8">
+	<Header title={t("blog.homeTitle")} />
+
+	<div aria-labelledby="latest-posts-title">
+		<h3 id="latest-posts-title" class="sr-only">{t("blog.latestPosts")}</h3>
+		<PostList locale={locale} posts={posts.slice(0, 3)} />
+	</div>
+
+	<div class="flex justify-center">
+		<a class="border-b-2 border-accent" href={getBlogIndexPath(locale)}>
+			{t("blog.allPosts")}
+		</a>
+	</div>
+</section>

@@ -1,0 +1,14 @@
+---
+interface Props {
+	href: string;
+	variant?: "link" | "action";
+}
+
+const { href, variant = "link" } = Astro.props;
+const classes =
+	variant === "action"
+		? "inline-flex min-h-11 w-fit items-center justify-center rounded-sm border border-primary/50 bg-primary/10 px-4 py-2 text-sm font-bold text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+		: "inline-flex min-h-11 w-fit items-center border-b border-primary/60 text-sm text-foreground/80 transition-colors hover:text-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary";
+---
+
+<a href={href} class={classes}><slot /></a>
