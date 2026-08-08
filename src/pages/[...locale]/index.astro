@@ -1,57 +1,56 @@
 ---
-import "@/styles/global.css";
-import i18n from "i18next";
 import { buildStaticPaths } from "astro-react-i18next/utils";
+import { getCollection } from "astro:content";
+import BlogSection from "@/components/blog/blog-section.astro";
 import { Hero } from "@/components/hero/hero";
 import { Divider } from "@/components/ui/divider";
 import { Code } from "@/components/code/code";
 import { Travel } from "@/components/travel/travel";
 import { TravelMap } from "@/components/travel/map.tsx";
 import { About } from "@/components/about/about";
-import { Sidebar } from "@/components/sidebar/sidebar";
 import { Photograph } from "@/components/photo/photo.tsx";
+import SiteLayout from "@/layouts/site-layout.astro";
+import {
+	getLocalizedPosts,
+	getPublishedBlogPairs,
+	normalizeBlogLocale,
+} from "@/lib/blog";
 
 export function getStaticPaths() {
 	return buildStaticPaths();
 }
 
-const res = await fetch("https://api.unsplash.com/users/provsalt/photos", {
-	headers: {
-		Authorization: `Client-ID ${import.meta.env.UNSPLASH_ACCESS_KEY}`,
-	},
-});
-const photos = await res.json();
+const locale = normalizeBlogLocale(Astro.params.locale);
+const posts = getLocalizedPosts(
+	getPublishedBlogPairs(await getCollection("blog")),
+	locale,
+);
+const localePaths = { en: "/", ja: "/ja/" };
+const description =
+	locale === "ja"
+		? "レイモンド・グーの個人サイト。ソフトウェア、旅、写真、文章を紹介しています。"
+		: "Raymond Goo's personal site, featuring software, travel, photography, and writing.";
 ---
 
-<html lang={i18n.language}>
-	<head>
-		<meta charset="utf-8" />
-		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
-		<!--<link rel="icon" href="/favicon.ico" />-->
-		<meta name="description" content="Raymond Goo's website. Find out more about this person here!" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Raymond Goo's Website</title>
-	</head>
-	<body class="flex flex-col min-h-svh">
-		<div class="fixed right-0 top-0 h-full z-100">
-			<Sidebar client:idle />
-		</div>
-		<div class="p-4 pt-8 md:pt-12 md:p-8 flex-1 flex flex-col gap-12">
+<SiteLayout
+	locale={locale}
+	title="Raymond Goo"
+	description={description}
+	canonicalPath={locale === "ja" ? "/ja/" : "/"}
+	localePaths={localePaths}
+>
+	<Hero />
+	<Divider />
+	<Code client:load />
+	<BlogSection locale={locale} posts={posts} />
+	<Travel />
 
-			<Hero />
-			<Divider />
-			<Code client:load />
-			<Travel />
+	<div class="px-4">
+		<TravelMap client:only="react">
+			<div slot="fallback">Loading</div>
+		</TravelMap>
+	</div>
 
-			<div class="px-4">
-				<TravelMap client:only="react">
-					<div slot="fallback">Loading</div>
-				</TravelMap>
-			</div>
-
-			<Photograph photos={photos} client:visible />
-			<About client:idle />
-		</div>
-	</body>
-</html>
+	<Photograph client:visible />
+	<About client:idle />
+</SiteLayout>

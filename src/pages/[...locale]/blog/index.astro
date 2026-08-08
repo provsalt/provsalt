@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import i18next from "i18next";
+import BlogLink from "@/components/blog/blog-link.astro";
+import BlogPageHeading from "@/components/blog/blog-page-heading.astro";
+import PostList from "@/components/blog/post-list.astro";
+import SiteLayout from "@/layouts/site-layout.astro";
+import {
+	getBlogIndexPath,
+	getLocalizedPosts,
+	getPublishedBlogPairs,
+	getRssPath,
+	type BlogLocale,
+} from "@/lib/blog";
+
+export function getStaticPaths() {
+	return [
+		{ params: { locale: undefined }, props: { locale: "en" } },
+		{ params: { locale: "ja" }, props: { locale: "ja" } },
+	];
+}
+
+interface Props {
+	locale: BlogLocale;
+}
+
+const { locale } = Astro.props;
+const t = i18next.getFixedT(locale);
+const pairs = getPublishedBlogPairs(await getCollection("blog"));
+const posts = getLocalizedPosts(pairs, locale);
+const archivePaths = {
+	en: getBlogIndexPath("en"),
+	ja: getBlogIndexPath("ja"),
+};
+const homePath = locale === "ja" ? "/ja/" : "/";
+---
+
+<SiteLayout
+	locale={locale}
+	title={`${t("blog.archiveTitle")} — Raymond Goo`}
+	description={t("blog.archiveDescription")}
+	canonicalPath={getBlogIndexPath(locale)}
+	localePaths={archivePaths}
+>
+	<header class="space-y-6 border-b border-primary/30 pb-10">
+		<BlogLink href={homePath}>← {t("blog.backHome")}</BlogLink>
+		<div class="space-y-3">
+			<BlogPageHeading
+				title={t("blog.archiveTitle")}
+				description={t("blog.archiveDescription")}
+			/>
+		</div>
+		<BlogLink href={getRssPath(locale)} variant="action">
+			{t("blog.rssLabel")}
+		</BlogLink>
+	</header>
+
+	<section aria-labelledby="all-posts-heading" class="pt-10">
+		<h2 id="all-posts-heading" class="sr-only">{t("blog.latestPosts")}</h2>
+		<PostList locale={locale} posts={posts} showYearSeparators />
+	</section>
+</SiteLayout>

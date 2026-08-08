@@ -5,10 +5,10 @@ import { Social } from "@/components/about/social.tsx";
 export const Hero = () => {
 	const { t } = useTranslation();
 	return (
-		<main className="flex flex-col gap-6">
+		<header className="flex flex-col gap-6">
 
 			<div className="flex flex-col gap-4 mb-10">
-				<p className="text-4xl">{t("hero.title")}</p>
+				<h1 className="text-4xl">{t("hero.title")}</h1>
 				<p className="text-xl text-gray-200">{t("hero.description")}</p>
 			</div>
 
@@ -28,6 +28,6 @@ export const Hero = () => {
 					</a>
 				</Button>
 			</div>
-		</main>
+		</header>
 	)
 }

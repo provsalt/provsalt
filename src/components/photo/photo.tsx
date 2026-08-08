@@ -5,8 +5,16 @@ import { useEffect, useState } from "react";
 import type { UnsplashPhotoList } from "@/@types/unsplash.ts";
 import { fetchLatestPhotos } from "@/lib/photo-client";
 
-export const Photograph = ({photos: initialPhotos} : {photos: UnsplashPhotoList}) => {
-	const [photos, setPhotos] = useState(initialPhotos);
+const BREAKPOINT_COLUMNS = {
+	default: 4,
+	1100: 3,
+	700: 2,
+	500: 1,
+};
+
+export const Photograph = () => {
+	const [photos, setPhotos] = useState<UnsplashPhotoList>([]);
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		const controller = new AbortController();
@@ -14,38 +22,42 @@ export const Photograph = ({photos: initialPhotos} : {photos: UnsplashPhotoList}
 		fetchLatestPhotos(fetch, controller.signal)
 			.then(setPhotos)
 			.catch(() => {
-				// Keep the build-time photos when the runtime refresh is unavailable.
+				// Keep any currently displayed photos when the refresh is unavailable.
 			});
 
 		return () => controller.abort();
 	}, []);
 
-	const breakpointColumnsObj = {
-		default: 4,
-		1100: 3,
-		700: 2,
-		500: 1
-	};
-	const {t} = useTranslation();
 	return (
 		<section className="flex flex-col gap-8">
 			<Header title={t("photo.title")} />
 
-			<Masonry className="flex gap-4 flex-col md:flex-row" breakpointCols={breakpointColumnsObj} columnClassName="space-y-4">
-				{
-					!photos ? "Couldn't load images" : photos.map((photo, i) => {
-						if (i > 15) return;
-						return (
-							<img key={photo.id} loading="lazy" decoding="async" src={photo.urls.small} alt={photo.alt_description ?? "Photo"} className="object-fill w-full rounded-sm" />
-						)
-					})
-				}
+			<Masonry
+				className="flex flex-col gap-4 md:flex-row"
+				breakpointCols={BREAKPOINT_COLUMNS}
+				columnClassName="space-y-4"
+			>
+				{photos.slice(0, 16).map((photo) => (
+					<img
+						key={photo.id}
+						loading="lazy"
+						decoding="async"
+						src={photo.urls.small}
+						alt={photo.alt_description ?? "Photo"}
+						className="w-full rounded-sm object-fill"
+					/>
+				))}
 			</Masonry>
 
 			<div className="flex justify-center">
-				<a target="_blank" className="border-b-2 border-accent" href="https://unsplash.com/@provsalt">{t("photo.unsplash")}</a>
+				<a
+					target="_blank"
+					className="border-b-2 border-accent"
+					href="https://unsplash.com/@provsalt"
+				>
+					{t("photo.unsplash")}
+				</a>
 			</div>
-
 		</section>
-	)
-}
+	);
+};

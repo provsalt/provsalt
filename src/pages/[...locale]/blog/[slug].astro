@@ -1,0 +1,47 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BlogPostLayout from "@/layouts/blog-post-layout.astro";
+import {
+	getAlternatePostPaths,
+	getPublishedBlogPairs,
+	type BlogLocale,
+} from "@/lib/blog";
+
+export async function getStaticPaths() {
+	const pairs = getPublishedBlogPairs(await getCollection("blog"));
+
+	return pairs.flatMap((pair) =>
+		(["en", "ja"] as const).map((locale) => {
+			const entry = pair[locale];
+			return {
+				params: {
+					locale: locale === "en" ? undefined : "ja",
+					slug: entry.data.urlSlug,
+				},
+				props: {
+					locale,
+					entry,
+					alternatePaths: getAlternatePostPaths(pair),
+				},
+			};
+		}),
+	);
+}
+
+interface Props {
+	locale: BlogLocale;
+	entry: CollectionEntry<"blog">;
+	alternatePaths: Record<BlogLocale, string>;
+}
+
+const { locale, entry, alternatePaths } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BlogPostLayout
+	locale={locale}
+	entry={entry}
+	alternatePaths={alternatePaths}
+>
+	<Content />
+</BlogPostLayout>

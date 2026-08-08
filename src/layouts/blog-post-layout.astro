@@ -1,0 +1,265 @@
+---
+import type { CollectionEntry } from "astro:content";
+import i18next from "i18next";
+import BlogLink from "@/components/blog/blog-link.astro";
+import BlogPageHeading from "@/components/blog/blog-page-heading.astro";
+import SiteLayout from "@/layouts/site-layout.astro";
+import {
+	formatBlogDate,
+	getBlogIndexPath,
+	getBlogPostPath,
+	getRssPath,
+	type BlogLocale,
+} from "@/lib/blog";
+
+interface Props {
+	locale: BlogLocale;
+	entry: CollectionEntry<"blog">;
+	alternatePaths: Record<BlogLocale, string>;
+}
+
+const { locale, entry, alternatePaths } = Astro.props;
+const t = i18next.getFixedT(locale);
+const otherLocale: BlogLocale = locale === "en" ? "ja" : "en";
+const canonicalPath = getBlogPostPath(entry);
+---
+
+<SiteLayout
+	locale={locale}
+	title={`${entry.data.title} — Raymond Goo`}
+	description={entry.data.description}
+	canonicalPath={canonicalPath}
+	localePaths={alternatePaths}
+	pageType="article"
+	mainClass="mx-auto min-h-svh w-full max-w-7xl px-4 py-8 md:px-8 md:py-12"
+>
+	<article aria-labelledby="article-title">
+		<header class="mx-auto flex max-w-5xl flex-col gap-6 border-b border-primary/30 pb-10 md:pb-14">
+			<BlogLink href={getBlogIndexPath(locale)}>
+				← {t("blog.backToArchive")}
+			</BlogLink>
+			<BlogPageHeading
+				id="article-title"
+				title={entry.data.title}
+				description={entry.data.description}
+			/>
+			{
+				entry.data.tags.length > 0 && (
+					<ul
+						class="flex list-none flex-wrap gap-2 p-0"
+						aria-label={t("blog.tags")}
+					>
+						{entry.data.tags.map((tag) => (
+							<li class="font-japanese rounded-full border border-secondary/70 bg-secondary/20 px-3 py-1 text-xs text-foreground/80">
+								{tag}
+							</li>
+						))}
+					</ul>
+				)
+			}
+		</header>
+
+		<div class="mx-auto grid max-w-5xl gap-10 py-10 md:py-14 lg:grid-cols-[12rem_minmax(0,72ch)] lg:gap-14">
+			<aside
+				class="article-meta font-japanese relative flex flex-wrap gap-x-8 gap-y-5 border-l-2 border-primary/70 pl-5 text-sm lg:sticky lg:top-8 lg:h-fit lg:flex-col"
+				aria-label={t("blog.published")}
+			>
+				<div>
+					<p class="mb-1 text-[0.68rem] font-bold tracking-[0.16em] text-primary uppercase">
+						{t("blog.published")}
+					</p>
+					<time
+						class="text-foreground/80"
+						datetime={entry.data.pubDate.toISOString()}
+					>
+						{formatBlogDate(entry.data.pubDate, locale)}
+					</time>
+				</div>
+				{
+					entry.data.updatedDate && (
+						<div>
+							<p class="mb-1 text-[0.68rem] font-bold tracking-[0.16em] text-primary uppercase">
+								{t("blog.updated")}
+							</p>
+							<time
+								class="text-foreground/80"
+								datetime={entry.data.updatedDate.toISOString()}
+							>
+								{formatBlogDate(entry.data.updatedDate, locale)}
+							</time>
+						</div>
+					)
+				}
+				<BlogLink href={alternatePaths[otherLocale]}>
+					{t("blog.readOtherLanguage")} →
+				</BlogLink>
+			</aside>
+
+			<div class="blog-prose">
+				<slot />
+			</div>
+		</div>
+
+		<footer class="font-japanese mx-auto flex max-w-5xl justify-end border-t border-primary/30 py-10 text-sm text-foreground/70">
+			<div class="flex flex-wrap justify-end gap-3">
+				<BlogLink href={getRssPath(locale)} variant="action">
+					{t("blog.rssLabel")}
+				</BlogLink>
+				<BlogLink href={getBlogIndexPath(locale)}>
+					{t("blog.backToArchive")}
+				</BlogLink>
+			</div>
+		</footer>
+	</article>
+</SiteLayout>
+
+<style>
+	.article-meta::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -0.4375rem;
+		width: 0.75rem;
+		height: 0.75rem;
+		border: 2px solid var(--primary);
+		border-radius: 9999px;
+		background: var(--background);
+		box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 18%, transparent);
+	}
+</style>
+
+<style is:global>
+	.blog-prose {
+		width: min(100%, 72ch);
+		min-width: 0;
+		font-family: "Zen Maru Gothic", sans-serif;
+		font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+		line-height: 1.9;
+		color: color-mix(in oklab, var(--foreground) 90%, transparent);
+	}
+	.blog-prose > * + * {
+		margin-top: 1.5rem;
+	}
+	.blog-prose h2,
+	.blog-prose h3 {
+		color: var(--foreground);
+		font-weight: 700;
+		line-height: 1.3;
+		text-wrap: balance;
+		scroll-margin-top: 2rem;
+	}
+	.blog-prose h2 {
+		margin-top: 3.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
+		font-size: clamp(1.65rem, 1.45rem + 0.8vw, 2.25rem);
+	}
+	.blog-prose h3 {
+		margin-top: 2.5rem;
+		font-size: clamp(1.3rem, 1.2rem + 0.45vw, 1.65rem);
+	}
+	.blog-prose a {
+		color: var(--primary);
+		text-decoration-line: underline;
+		text-decoration-thickness: 0.08em;
+		text-underline-offset: 0.2em;
+	}
+	.blog-prose a:hover {
+		color: var(--foreground);
+	}
+	.blog-prose a:focus-visible {
+		border-radius: 0.125rem;
+		outline: 2px solid var(--primary);
+		outline-offset: 0.25rem;
+	}
+	.blog-prose strong {
+		color: var(--foreground);
+		font-weight: 700;
+	}
+	.blog-prose ul,
+	.blog-prose ol {
+		padding-left: 1.4rem;
+	}
+	.blog-prose ul {
+		list-style: disc;
+	}
+	.blog-prose ol {
+		list-style: decimal;
+	}
+	.blog-prose li + li {
+		margin-top: 0.5rem;
+	}
+	.blog-prose blockquote {
+		border-left: 3px solid var(--primary);
+		padding: 0.25rem 0 0.25rem 1.25rem;
+		color: color-mix(in oklab, var(--foreground) 72%, transparent);
+	}
+	.blog-prose :not(pre) > code {
+		border: 1px solid color-mix(in oklab, var(--primary) 28%, transparent);
+		border-radius: 0.2rem;
+		background: color-mix(in oklab, var(--secondary) 24%, transparent);
+		padding: 0.12rem 0.35rem;
+		font-size: 0.9em;
+	}
+	.blog-prose pre {
+		max-width: 100%;
+		overflow-x: auto;
+		border: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
+		border-radius: 0.25rem;
+		padding: 1rem;
+		line-height: 1.65;
+	}
+	.blog-prose img,
+	.blog-prose video {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 1px solid color-mix(in oklab, var(--primary) 28%, transparent);
+		border-radius: 0.25rem;
+		background: color-mix(in oklab, var(--card) 88%, var(--primary));
+	}
+	.blog-prose video {
+		max-height: min(78svh, 52rem);
+		background: #080808;
+	}
+	.blog-prose .blog-media-grid {
+		display: grid;
+		gap: 1rem;
+	}
+	.blog-prose .blog-media-grid > * {
+		margin: 0;
+	}
+	.blog-prose .blog-media-grid > p:has(> img) {
+		min-width: 0;
+	}
+	.blog-prose hr {
+		border: 0;
+		border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
+		margin-block: 3rem;
+	}
+	.blog-prose .footnotes {
+		margin-top: 4rem;
+		border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent);
+		padding-top: 1.5rem;
+		font-size: 0.9em;
+	}
+
+	@media (min-width: 48rem) {
+		.blog-prose .blog-media-grid--two-up,
+		.blog-prose .blog-media-grid--fossasia-final {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.blog-prose .blog-media-grid--fossasia-final > :nth-child(3) {
+			grid-row: 2;
+			grid-column: 1;
+		}
+		.blog-prose .blog-media-grid--fossasia-final > :nth-child(4) {
+			grid-row: 3;
+			grid-column: 1 / -1;
+		}
+		.blog-prose .blog-media-grid--fossasia-final > :nth-child(5) {
+			grid-row: 2;
+			grid-column: 2;
+		}
+	}
+</style>

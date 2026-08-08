@@ -1,0 +1,91 @@
+---
+import i18next from "i18next";
+import "@/styles/global.css";
+import { Sidebar } from "@/components/sidebar/sidebar";
+import type { BlogLocale } from "@/lib/blog";
+import { getRssPath } from "@/lib/blog";
+
+interface Props {
+	locale: BlogLocale;
+	title: string;
+	description: string;
+	canonicalPath: string;
+	localePaths: Record<BlogLocale, string>;
+	pageType?: "website" | "article";
+	mainClass?: string;
+}
+
+const {
+	locale,
+	title,
+	description,
+	canonicalPath,
+	localePaths,
+	pageType = "website",
+	mainClass =
+		"mx-auto flex min-h-svh w-full max-w-7xl flex-col gap-12 px-4 py-8 md:px-8 md:py-12",
+} = Astro.props;
+const site = Astro.site ?? new URL("https://raymond.moe");
+const canonicalUrl = new URL(canonicalPath, site);
+const feedUrl = new URL(getRssPath(locale), site);
+const t = i18next.getFixedT(locale);
+const feedTitle = t("blog.rssTitle");
+const alternates = Object.entries(localePaths) as [BlogLocale, string][];
+const englishAlternate = localePaths.en;
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#000000" />
+		<meta property="og:type" content={pageType} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta name="twitter:card" content="summary" />
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title={feedTitle}
+			href={feedUrl}
+		/>
+		{
+			alternates.map(([alternateLocale, path]) => (
+				<link
+					rel="alternate"
+					hreflang={alternateLocale}
+					href={new URL(path, site)}
+				/>
+			))
+		}
+		{
+			englishAlternate && (
+				<link
+					rel="alternate"
+					hreflang="x-default"
+					href={new URL(englishAlternate, site)}
+				/>
+			)
+		}
+		<title>{title}</title>
+	</head>
+	<body class="min-h-svh bg-background text-foreground antialiased">
+		<a
+			class="fixed top-3 left-3 z-200 -translate-y-24 rounded-sm bg-primary px-4 py-3 font-bold text-primary-foreground transition-transform focus:translate-y-0 focus:outline-none"
+			href="#main-content"
+		>
+			{t("accessibility.skipToContent")}
+		</a>
+		<div class="fixed right-0 top-0 z-100 h-full">
+			<Sidebar activeLocale={locale} localePaths={localePaths} client:idle />
+		</div>
+		<main id="main-content" class={mainClass} tabindex="-1">
+			<slot />
+		</main>
+	</body>
+</html>

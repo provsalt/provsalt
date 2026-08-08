@@ -8,7 +8,7 @@ export const Header = (props: HeaderProps) => {
 	return (
 		<div className="flex gap-4">
 			<Leader/>
-			<h1 className="text-2xl">{props.title}</h1>
+			<h2 className="text-2xl">{props.title}</h2>
 		</div>
 	)
 }
