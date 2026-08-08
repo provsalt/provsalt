@@ -10,6 +10,7 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   site: "https://raymond.moe",
   trailingSlash: "ignore",
+  compressHTML: true,
   image: {
     layout: "constrained",
     responsiveStyles: true,
