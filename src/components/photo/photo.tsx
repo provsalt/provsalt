@@ -1,9 +1,25 @@
 import { Header } from "@/components/ui/header.tsx";
 import { useTranslation } from "react-i18next";
 import Masonry from "react-masonry-css";
+import { useEffect, useState } from "react";
 import type { UnsplashPhotoList } from "@/@types/unsplash.ts";
+import { fetchLatestPhotos } from "@/lib/photo-client";
 
-export const Photograph = ({photos} : {photos: UnsplashPhotoList}) => {
+export const Photograph = ({photos: initialPhotos} : {photos: UnsplashPhotoList}) => {
+	const [photos, setPhotos] = useState(initialPhotos);
+
+	useEffect(() => {
+		const controller = new AbortController();
+
+		fetchLatestPhotos(fetch, controller.signal)
+			.then(setPhotos)
+			.catch(() => {
+				// Keep the build-time photos when the runtime refresh is unavailable.
+			});
+
+		return () => controller.abort();
+	}, []);
+
 	const breakpointColumnsObj = {
 		default: 4,
 		1100: 3,

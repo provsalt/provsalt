@@ -7,6 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "bun test",
     "locale:extract": "i18next-cli extract"
   },
   "dependencies": {
