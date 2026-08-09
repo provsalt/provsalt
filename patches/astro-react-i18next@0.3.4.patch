@@ -1,0 +1,18 @@
+diff --git a/dist/middleware-static.js b/dist/middleware-static.js
+index 7b7db491e4de41051547886ee0743a3e5b38fe0c..07601acb328f046a217825ae9826944250e56e54 100644
+--- a/dist/middleware-static.js
++++ b/dist/middleware-static.js
+@@ -10,7 +10,13 @@ function getLocaleConfig() {
+ }
+ 
+ // src/middleware-static.ts
++var ASTRO_RESERVED_ROUTES = ["/_astro", "/_actions", "/_server-islands", "/_image", "/api"];
+ async function onRequest(context, next) {
++  if (ASTRO_RESERVED_ROUTES.some(
++    (route) => context.url.pathname === route || context.url.pathname.startsWith(route + "/")
++  )) {
++    return next();
++  }
+   const { defaultLocale, locales } = getLocaleConfig();
+   const localeFromPathname = context.url.pathname.split("/")[1];
+   const nextLocale = [localeFromPathname, defaultLocale].find(
